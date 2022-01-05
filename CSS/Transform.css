@@ -1,0 +1,60 @@
+div{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/*==============    TRANSLATE   ===============*/
+.One{
+    background-color: red;
+    transform: translateX(10px);
+}
+
+.Two{
+    background-color: green;
+    transform: translateX(50%);    /*It implies; start at 50% position of the width of the element*/
+}
+
+
+
+/*===========   SCALE (Size); 0.X to any value  =============*/
+.S_One{
+    background-color: yellow;
+    margin-left: 50px;
+    transform: scaleX(2);
+}
+
+.S_Two{
+    background-color: blue;
+    margin-left: -25px;
+    transform: scaleX(0.5);
+}
+
+
+
+/*===================   ROTATE  ====================*/
+.R_One{
+    background-color: black;
+    margin-left: 20px;    
+    transform: rotateZ(45deg);
+}
+
+
+/*===================   SKEW  ====================*/
+.SK_One{
+    background-color: cyan;
+    display: inline;
+    float: left;
+    margin-top: 20px;
+    transform: skewY(20deg);
+}
+
+.SK_Two{
+    background-color: deeppink;
+    display: inline;
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+    transform: skewX(-20deg);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Ups in JavaScript</title>
+    <script>
+        //JavaScript offers three (3) types of popup boxes. Alert, Prompt and Confirm.
+
+        alert("This is an alert\nThis is another line");
+
+        var fName = prompt("Enter your first name");
+        var age = prompt("Enter your age", "Age in numbers");   //Second parameter is optional
+        var displayMessage = "Your name is " + fName + ", you are " + age + " years old."
+        alert(displayMessage);
+
+        var answer = confirm("Are your sure your want to quit?");
+        switch (answer) {
+            case true:
+                alert("You selected true");
+                break;
+            case false:
+                alert("You selected false");
+                break;
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

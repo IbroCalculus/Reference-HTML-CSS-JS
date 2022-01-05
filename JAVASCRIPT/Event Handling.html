@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function changeColor() {
+        var Para = document.getElementsByTagName(p);
+        Para[0].style.Color = "yellow";
+        Para[0].style.backgroundColor = "#000";
+    }
+</script>
+
+<body>
+    <!-- 
+        COMMON BUTTON EVENTS:
+        onClick, onLoad, onmouseover, onmouseout
+     -->
+    <p>A test paragraph text</p><br>
+
+    <button type="submit" onmouseover="changeColor()" onmouseout="alert('Mouse is out')">Submit Info</button>
+</body>
+
+</html>

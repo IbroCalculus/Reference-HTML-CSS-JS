@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of JQuery</title>
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="_Basics.css">
+</head>
+
+<body>
+    <!-- JQuery is JavaScript, it is basically a library or framework of javaScript -->
+
+    <div class="firstDIV" id="div1">
+        <h1>THIS IS A H1 HEADING</h1>
+        <h3>This is a h3 heading within the same div</h3>
+        <p>This is a paragraph, simply for test</p>
+    </div>
+
+    <div class="firstDIV" id="div2">
+        <h1>THIS IS THE SECOND H1 HEADING</h1>
+        <h4>This is a h4 heading within the same div</h4>
+        <p>This is a paragraph for heading 1</p>
+    </div>
+
+    <div id="btn1DIV">
+        <button>CLICK THIS BUTTON</button>
+    </div>
+
+    <!-- SYNTAX for using JQuery internally -->
+    <script>
+        $(document).ready(function () {
+
+            // ======= Code lies within ========
+
+            $("#div3").hide();
+            // $("#div1", "#div2").hide();
+
+            var state = 0;
+            $("button").click(function () {
+                if (state == 0) {
+                    $("#div2").hide();
+                    state = 1;
+                } else {
+                    $("#div2").show();
+                    state = 0;
+                }
+            });
+
+            // ======== Code lies within ========
+
+        });
+    </script>
+
+
+</body>
+
+</html>

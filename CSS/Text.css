@@ -1,0 +1,16 @@
+#h1_1{
+    color: red;
+    text-shadow: 3px 4px blue;  /* x y*/
+}
+
+#h1_2{
+    text-shadow: 3px 4px 5px blue;  /* x y blur*/
+}
+
+#h1_3{
+    text-shadow: 3px 4px 5px blue, -3px -4px 10px green;
+}
+
+#h1_4{
+    text-shadow: 3px 4px 5px rgba(255, 0, 0, 0.5);
+}

@@ -1,0 +1,3 @@
+
+
+NOTE: Run every php file by saving it in a server, In this case; XAMPP. ie C:\xampp\htdocs.

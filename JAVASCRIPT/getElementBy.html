@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayHello() {
+            alert("I am saying Hello");
+        }
+        // CHANGING CSS STYLES
+        function getElemByID() {
+            var text = document.getElementById("id1");
+            text.style.color = "#ff0000";
+            text.style.backgroundColor = "#123456";
+            text.style.fontStyle = "italic";
+        }
+        function getElemByTagName() {
+            var text2 = document.getElementsByTagName("h1");
+            text2[0].style.fontStyle = "italic";
+            text2[1].style.color = "#987654";
+
+            for (var i = 0; i < text2.length; i++) {
+                text2[i].style.backgroundColor = "yellow";
+            }
+        }
+        function getElemByClassName() {
+            var text3 = document.getElementsByClassName("class1");
+            for (var i = 0; i < text3.length; i++) {
+                text3[i].style.fontStyle = "italic";
+                text3[i].style.color = "#fff";
+                text3[i].style.backgroundColor = '#000';
+            }
+        }
+
+        // CHANGE TEXT
+        function changeText() {
+            var tex4 = document.getElementsByTagName("h2");
+            tex4[0].innerHTML = "This is the New h2 header";
+        }
+
+        // READ TEXT
+        function replaceText() {
+            var text5 = document.getElementsByClassName("para1");
+            var text5_1 = text5[0].innerHTML;
+            var text5_2 = text5[1].innerHTML;
+            var text5_3 = text5_1 + " & " + text5_2;
+            text5[2].innerHTML = text5_3;
+        }
+
+        // CHANGE IMAGE
+        function changeImage() {
+            // var image = document.getElementById("myImage");
+            // image.src = "Media/me2.jpg";
+            var image = document.getElementsByTagName("img");
+            image[0].src = "Media/me2.jpg";
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- NB: JavaScript is basically a 2 step process:
+    1. Select the element we want to target. ie
+        - getElementById
+        - getElementsByTagName
+        - getElementsByClassName
+
+    2. Change whatever it is we want to change. ie:
+        - CSS styles
+        - Change texts
+        - Change Images
+        - Validation
+        - Create new Pages
+        - Change internals
+ -->
+
+    <!-- CHANGING CSS STYLES -->
+    <h1>THIS IS A h1 HEADING</h1>
+    <h1>THIS IS Another h1 HEADING</h1>
+    <p id="id1">This is a paragraph of ID, id1</p>
+    <p class="class1">This is a paragraph of CLASS, class1</p>
+    <p class="class1">This is Another paragraph of CLASS, class2</p>
+
+    <button type="submit" onclick=sayHello()>Click to say Hello</button><br>
+    <button onclick="getElemByID()" style="margin-top: 10px;">getElementByID</button><br>
+    <button type="submit" onclick="getElemByTagName()" style="margin-top: 10px;">getElementsByTagName</button><br>
+    <button type="submit" onclick=getElemByClassName() style="margin-top: 10px;">getElementsByClassName</button><br>
+
+
+    <!-- CHANGING TEXT -->
+    <h2>This is a h2 header text </h2>
+    <button onclick="changeText()" style="margin-top: 10px;">CHANGE TEXT</button><br>
+
+    <!-- READ TEXT -->
+    <p class="para1">This is a paragraph of class para1</p>
+    <p class="para1">This is another of class para1</p>
+    <p class="para1">This is the third paragraph of class para1 to be replaced by the 2 above</p>
+    <button onclick="replaceText()" style="margin-top: 10px;">CHANGE TEXT</button><br><br>
+
+    <!-- CHANGING IMAGE -->
+    <img src="Media/me.png" alt="HHH" width="200px" height="200px" id="myImage" style="display: block;">
+    <button onclick="changeImage()" style="margin-top: 10px;">CHANGE IMAGE</button><br><br>
+
+</body>
+
+</html>

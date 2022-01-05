@@ -1,0 +1,30 @@
+
+/* NB: Global and Local Variables */
+
+/* Global Variables */
+:root{
+    --divBgColorBg1: #123456;
+    --divBorderRadius1: 5px;
+    --divHeight: 100px;
+    --divWidth: 200px;
+    --divMargin: 10px;
+}
+
+div{
+    /*How to use the variable*/
+    width: var(--divWidth);
+    height: var(--divHeight);
+    margin: var(--divMargin);
+    background: var(--divBgColorBg1);
+}
+
+.div1:hover{
+    background: yellow;
+}
+
+/* Local Variables */
+.div2:hover{
+    --bgColor: brown;
+    background: var(--bgColor);
+}
+

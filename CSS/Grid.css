@@ -1,0 +1,109 @@
+
+
+.wrapper3 > div, .wrapper2 > div, .wrapper > div{
+    background: #ddd;
+    padding: 1em;
+}
+
+.wrapper3 > div:nth-child(odd), .wrapper2 > div:nth-child(odd), .wrapper > div:nth-child(odd){
+    background: #eee;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 70% 29.5%;  /*.5% used in gap: "column-gap*. NB: Alternative is fraction(fr) or pixels, check .wrapper2*/  
+    /* grid-template-columns: 30% 40% 30%; */
+
+    column-gap: .5%;    /*grid-column-gap: 1%; is obsolete*/
+    row-gap: 1em;
+    /* gap: .5%;   If the above 2 (column-gap and row-gap) share same value, use this shortcut */
+}
+
+.wrapper2{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /*Using fraction(fr) instead of %ge*. fr is Recommended over others*/
+    /* grid-template-columns: repeat(4, 2fr);  Instead of: 2fr 2fr 2fr 2fr*/
+    /* grid-template-columns: repeat(4, 1fr 2fr); Instead of: 1fr 2fr 1fr 2fr */
+    gap: 5px;
+
+    /* grid-auto-rows: 100px; Height of each row. CHECK: Reference; grid-template-rows. ie ...: 80px 120px; */
+    grid-auto-rows: minmax(100px, auto); /*Flexible height compared to the above which is fixed.*/
+}
+
+.nested{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 70px;
+    gap: 1em;
+}
+
+.nested > div{
+    border: #333 1px solid;
+}
+
+
+.wrapper3{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1em;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.box1{
+    /* align-self: start; */
+    grid-column: 1/3;   /*How much column it takes. CHECK: Traversy Media: 23:00*/
+    grid-row: 1/3;
+}
+
+.box2{
+    /* align-self: end; */
+}
+
+.box3{
+    /* justify-self: end; */
+}
+
+
+/*======================================== EXAMPLES BY Easy Tutorials ========================================*/
+.Box1, .Box5{
+    background: #607d8b;
+}
+.Box2, .Box6{
+    background: #ad0b42;
+}
+.Box3, .Box7{
+    background: #3e6f04;
+}
+.Box4, .Box8{
+    background: #040b31;
+}
+.hero div{
+    padding: 30PX;
+}
+
+.hero h1{
+    color: white;
+}
+.hero{
+    display: grid;
+    --rowHeight1: 150px;
+    --rowHeight2: 250px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

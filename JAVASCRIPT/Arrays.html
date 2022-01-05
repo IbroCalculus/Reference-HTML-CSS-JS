@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //An array accepts elements of any data type
+        var names = ["Ibrahim", "Musa", "Suleiman", 29, 5.8];
+        // var names2 = new Array("Ibrahim", "Musa", "Suleiman", 29, 5.8);
+        document.write("You are welcome Mr " + names[2] + " " + names[0] + " " + names[1]);
+
+        //Check if a value is an array
+        console.log("Is the value an array?: " + Array.isArray(names));
+
+        //Get index of value in an array
+        console.log("The index of Suleiman is: " + names.indexOf("Suleiman"));
+
+        //Nested Array
+        var identity = [["Ibrahim", 28], ["Samuel", 31], ["Jerome", 51]];
+        console.log(identity[1][1]);
+
+        // UPDATE AN ARRAY
+        names[0] = "Kabiru";
+        document.write("<br> You are welcome Mr " + names[2] + " " + names[0] + " " + names[1]);
+
+        // UPDATE AN ARRAY WITH PUSH; Adds an element to the end of the array
+        var array1 = ['One', 'Two', 'Three'];
+        var array2 = ["Four", "Five", "Six", "Seven"];
+        array1.push(array2);
+        console.log("array1.push(array2): " + array1);
+
+        // UPDATE AN ARRAY WITH UNSHIFT; Adds an element to the beginning of the array
+        array2.unshift("ZERO");
+        console.log("array2.unshift(): " + array2);
+
+        // DELETE ITEM FROM AN ARRAY USING POP; Removes the last item in the array
+        array2.pop();
+        console.log("array2.pop(): " + array2);
+
+        // DELETE ITEM FROM AN ARRAY USING SHIFT; Removes the first item in the array
+        array2.shift();
+        console.log("array2.shift(): " + array2);
+
+        //CONVERT AN ARRAY TO A STRING
+        stringArray = JSON.stringify(array2);
+        console.log("This is the stringified array2: " + stringArray);
+        console.log("This is the non-stringified array2: " + array2);
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+
+body{
+    background-image: linear-gradient(rgba(2, 53, 255, 0.7), rgba(3, 42, 201, 0.7)), url(Media/mountains.jpg);
+    background-position: center;
+}

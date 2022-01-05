@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today = new Date();
+        document.write(today);
+        document.write('<br>');
+
+        var useString = today.toDateString();
+        document.write(useString);
+        document.write("<br>");
+
+        var getOthers = "DAY: " + today.getDay() + ", MONTH: " + today.getMonth();
+        document.write(getOthers);
+        document.write("<br>");
+
+        var x = "DATE: " + today.getDate() + ", FULL_YEAR: " + today.getFullYear();
+        document.write(x);
+        document.write("<br><br>");
+
+        // SET DATE
+        today.setYear(2022);
+        today.setFullYear(2123);
+        document.write(today);
+        document.write("<br>");
+        document.write(today.toDateString());
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

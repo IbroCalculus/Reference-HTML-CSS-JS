@@ -1,0 +1,45 @@
+#box1{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    margin: 10px;
+    float: left;
+
+    /* box-shadow: x y color  ;  */
+    box-shadow: 5px 5px red;
+}
+
+#box2{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    margin: 10px;
+    float: left;
+
+    /* box-shadow: x y blur color  ;  */
+    box-shadow: 5px 5px 5px red;
+}
+
+#box3{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    margin: 10px;
+    float: left;
+
+    /* box-shadow: x y blur spread-radius color  ;  */
+    box-shadow: 5px 5px 5px 7px red;
+}
+
+#box4{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+
+    /* INNER SHADOW / INNER GLOW */
+    /* box-shadow: x y blur (spread-radius: optional) color  ;  */
+    box-shadow: 0px 0px 10px 5px red;
+}

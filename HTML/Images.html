@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>This is an Image.</h1>
+  <img src="Media/me.png" title="MY PHOTO" alt="Alternate text if image not visible" width="200" height="200" />
+  <img src="./Media/me.png" alt="Alternate text if image not visible" , width="200px" , height="200px" /> <br>
+
+  <!--The below will display in live server, but not in main browser-->
+  <img src="/Media/me.png" alt="Alternate text if image not visible" , width="200px" , height="200px" /> <br>
+
+  <!--Image from URL-->
+  <img src="https://www.nicepng.com/png/detail/222-2223595_udemy-logo-logo-udemy.png" alt=" Not URL available" /> <br>
+
+  <!-- Fill container with image via percentage in css -->
+  <h1>Fill container with image via percentage in css</h1>
+  <div style="height: 200px; background-color: red;">
+    <img src="Media/me.png" , style="
+    display: block;
+    max-height: 80%;
+    margin: auto;
+
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);" />
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createNewElem() {
+            var Para_Elem = document.createElement("p")
+            var main = document.getElementById("mainDIV");
+            main.appendChild(Para_Elem);
+
+            var Para_text = document.createTextNode("This is the new paragraph text created");
+            Para_Elem.appendChild(Para_text);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- New elements are added after the last element in the section or div -->
+
+    <div id="mainDIV">
+        <h1>This is a h1 header, below will be inserted a newly created element</h1>
+    </div>
+    <input type="button" onclick="createNewElem()" value="Click Me!">
+</body>
+
+</html>

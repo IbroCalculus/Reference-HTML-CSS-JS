@@ -1,0 +1,19 @@
+h1:hover{
+    cursor: help;
+}
+
+h2:hover{
+    cursor: zoom-out;
+}
+
+h3:hover{
+    cursor: crosshair;
+}
+
+#cursor4:hover{
+    cursor: progress;
+}
+
+#cursor5:hover{
+    cursor: url("Media/MailIcon.ico"), default;
+}

@@ -1,0 +1,21 @@
+.headClass1{
+    background-color: red;
+}
+
+h3.headClass2{
+    background-color: yellow;
+}
+
+.headClass3{
+    color: #098765;
+}
+
+#ID1{
+    background-color: indigo;
+    color: white;
+}
+
+#ID2{
+    background-color: green;
+    color: white;
+}

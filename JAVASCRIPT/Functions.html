@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // Alert function
+        // var Name = "Ibrahim Musa Suleiamn"
+        // alert("You are welcome " + Name);
+
+
+        // Generic functions
+        function sayHello() {
+            document.write("This is from a function! ");
+        }
+
+
+        // Function with parameter
+        function sayHello2(fName) {
+            document.write("You are welcome Mr " + fName);
+        }
+
+        function multiply(x, y) {
+            var answer = x * y;
+            document.write(", The answer = " + answer + ", ");
+        }
+
+
+        // Return result in function
+        function multiply3(x, y) {
+            var answer = x * y;
+            return answer;
+        }
+
+        sayHello();
+        sayHello2("IbrahimMBS");
+        multiply(4, 5);
+        var returned_answer = multiply3(3, 5);
+        document.write("The returned answer = " + returned_answer)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

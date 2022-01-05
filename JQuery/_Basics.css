@@ -1,0 +1,11 @@
+.firstDIV{
+    padding: 20px;
+    display: inline-block;
+    border: red solid 2px;
+    background: #123456;
+    color: white;
+}
+
+#btn1DIV{
+    margin-top: 20px;
+}

@@ -1,0 +1,23 @@
+
+/* The calc function in css is used for carrying out arithmetic functions. E.g
+
+    height: calc(100vh - 50px); 
+
+    CHECK: "Learn HTML5 and CSS3 from Scratch" : 5:32:00
+
+*/
+
+*{
+    margin:0%;
+}
+
+#navBar{
+    width: 100vw;
+    height: 100px;
+    background: red;
+}
+
+#banner{
+    background: blue;
+    height: calc(100vh - 100px); 
+}

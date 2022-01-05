@@ -1,0 +1,8 @@
+img{
+    opacity: .2;
+    transition: opacity 1s ease-in-out;     /* (Optional) To control the opacity transition duration */
+}
+
+img:hover{
+    opacity: 1;
+}

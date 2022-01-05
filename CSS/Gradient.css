@@ -1,0 +1,62 @@
+.common{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 20px;
+}
+.common1{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 20px;
+}
+.common2{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 20px;
+}
+
+#DIV1{
+    background: linear-gradient(red, blue)
+}
+
+#DIV2{
+    background: linear-gradient(to right, red, blue)
+}
+
+#DIV3{
+    background: linear-gradient(to top right,red, blue)
+}
+
+#DIV4{
+    background: linear-gradient(to bottom left ,red, blue)
+}
+
+#DIV5{
+    background: linear-gradient(90deg ,black, yellow)
+}
+
+#DIV6{
+    background: linear-gradient(red, blue, yellow, black)
+}
+
+#DIV7{
+    background: linear-gradient(red, blue, yellow, black)
+}
+
+#DIV8{
+    background: linear-gradient(blue, yellow 20%);/* At 20% from origin, start yellow*/
+}
+
+#DIV9{
+    background: linear-gradient(yellow 50%, blue 50%);
+}
+
+#DIV10{
+    background: linear-gradient(yellow 33%, blue 66%, red 100%);
+}
+
+#DIV11{
+    background: linear-gradient(rgba(255,0,0,0.3), rgba(255,0,0,1));
+}

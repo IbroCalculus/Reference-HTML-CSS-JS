@@ -1,0 +1,14 @@
+h1{
+    
+        Background-Color: #987643;
+        color: green;
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: black 2px dashed;;
+}
+
+h2{
+        
+        border-bottom: black 4px solid;
+        color: yellow;
+}
