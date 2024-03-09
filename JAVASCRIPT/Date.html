@@ -7,12 +7,15 @@
     <title>Document</title>
     <script>
         var today = new Date();
+        // var today1 = new Date(2022,0, 27);
         document.write(today);
         document.write('<br>');
 
+        //Returns date and time as strings: E.g: Wed Jun 29 2022
         var useString = today.toDateString();
         document.write(useString);
         document.write("<br>");
+
 
         var getOthers = "DAY: " + today.getDay() + ", MONTH: " + today.getMonth();
         document.write(getOthers);

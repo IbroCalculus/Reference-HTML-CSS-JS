@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with checkboxes</title>
+
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1em;
+        }
+
+        #mySubmit{
+            font-size: 1em;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="checkbox" name="" id="myCheckBox">
+    <label for="myCheckBox">Subscribe</label><br><br>
+
+    <input type="radio" name="card" id="visaBtn">
+    <label for="visaBtn">Visa</label><br>
+    <input type="radio" name="card" id="masterCardBtn">
+    <label for="masterCardBtn">MasterCard</label><br>
+    <input type="radio" name="card" id="paypalBtn">
+    <label for="paypalBtn">PayPal</label><br><br>
+
+    <button type="submit" id="mySubmit">Submit</button>
+
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+
+    <script>
+        const myCheckbox = document.getElementById("myCheckBox");
+        const visaBtn = document.getElementById("visaBtn");
+        const masterCardBtn = document.getElementById("masterCardBtn");
+        const paypalBtn = document.getElementById("paypalBtn");
+        const mySubmit = document.getElementById("mySubmit");
+        const subResult = document.getElementById("subResult");
+        const paymentResult = document.getElementById("paymentResult");
+
+        mySubmit.onclick = function(){
+            if(myCheckbox.checked){
+                subResult.textContent = `You are subscribed`;
+            }else{
+                subResult.textContent = `You are NOT subscribed`;
+            }
+
+            if(visaBtn.checked){
+                paymentResult.textContent = `You are paying with Visa`;
+            }else if(masterCardBtn.checked){
+                paymentResult.textContent = `You are paying with MasterCard`;
+            }else if(paypalBtn.checked){
+                paymentResult.textContent = `You are paying with PayPal`;
+            }else{
+                paymentResult.textContent = `You MUST select a payment type`;
+            }
+        }
+
+
+    </script>
+</body>
+</html>

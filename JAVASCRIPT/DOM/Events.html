@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EVENTS</title>
+</head>
+<body id="body" >  <!-- onload="alert('Welcome')" -->
+
+    <h1>=================== ONCLICK EVENT =========================</h1>
+    <h1 onclick="this.innerHTML='You clicked on this text'">This text will change if you click on it</h1>
+    <h1 onclick="changeColor(this)">This text will change color if you click on it</h1>
+
+
+    <h1 id="id1">Click on the button bellow to change the background</h1>
+    <button id="btn1" onclick="changeBg()">Click here</button>
+    
+    <hr>
+    <h1>=================== ONLOAD EVENT =========================</h1>
+    <!-- CHECK THE BODY TAG COMMENT -->
+
+    <hr>
+    <h1>=================== ONINPUT EVENT =========================</h1>
+    <p id="inputP">This text will change on input below</p>
+    <input type="text" id="words" oninput="addText()">
+
+    <hr>
+    <h1>=================== ONMOUSEOVER EVENT =========================</h1>
+    <p id="mouseP" onmouseover="mOver(this)" onmouseout="mOut(this)">Move your mouse over this paragraph</p>
+
+
+
+
+    
+
+    <script>
+        // -----------------------ONCLICK --------------------
+        function changeColor(obj){
+            obj.style.color = "red";
+            obj.textContent = "Text clicked, color changed";
+        }
+        
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = changeBg;    //Do not add ()
+        function changeBg(){
+            document.querySelector('body').style.background = "green";
+        };
+
+        // -----------------------ONINPUT --------------------
+        function addText(){
+            var words = document.getElementById('words');
+            let wordsValue = words.value;
+            inputP.textContent = `You Type: ${wordsValue}`;
+        }
+
+        // -----------------------ONMOUSE OVER --------------------
+        function mOver(obj){
+            obj.textContent = "Mouse over this text";           
+        }
+        function mOut(obj){
+            obj.textContent = "Mouse out of this text";
+        }
+
+
+    </script>
+</body>
+</html>

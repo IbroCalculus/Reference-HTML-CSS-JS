@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    
+    <style>
+        .xx{
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- HTML events are "things" that happen to HTML elements.
+    When JavaScript is used in HTML pages, JavaScript can "react" on these events -->
+
+    <!-- COMMON HTML Events:
+        - onchange
+        - onclick
+        - onmouseover
+        - onmouseout
+        - onkeydown
+        - onload
+     -->
+    
+    <p id="p1">This is a paragraph text</p>
+    <button type="button" onclick=func1() >Click this button</button><br>
+    <button type="button" onclick="this.innerHTML=Date()" style="margin-top: 10px;">The time is?</button>
+    <hr>
+    
+    <button id="btn1" onclick="this.innerHTML = 'CLICKED'" class="xx" >CLICK HERE NOW</button><br>
+    <button onclick="this.innerHTML = Date()"  class="xx" >The time is?</button><br>
+    <button onclick="this.innerHTML = 'You clicked this'"  class="xx" >Click to observe the change</button>
+    
+
+    
+    <script>
+        // E.g onClick, 
+        function func1(){
+           var x =  document.getElementById('p1');
+           x.innerHTML = "The button below clicked!"
+        }
+
+        function func2(){
+            var x = this;
+            this.innerHTML = "This button CLICKED";
+            // this.style.color = "#123456";
+        }
+
+    </script>
+</body>
+</html>

@@ -7,10 +7,24 @@
     <title>Document</title>
 
     <script>
+
+        // CHECK ALSO: Spread Operators.html: This is represented by 3 dots (...). 
+        // It allows an iterable such as an array or string to be expanded into separate elements. (ie unpack the elements).
+
+
+        
+        // NOTE: Other things related to arrays include: Map_ref.html, Filter_ref.html, reduce_ref.html
+
+
         //An array accepts elements of any data type
         var names = ["Ibrahim", "Musa", "Suleiman", 29, 5.8];
+        
         // var names2 = new Array("Ibrahim", "Musa", "Suleiman", 29, 5.8);
         document.write("You are welcome Mr " + names[2] + " " + names[0] + " " + names[1]);
+
+        // Length of an array
+        var aa = ["One","Two","Three"]
+        document.write(aa.length)
 
         //Check if a value is an array
         console.log("Is the value an array?: " + Array.isArray(names));
@@ -48,6 +62,24 @@
         stringArray = JSON.stringify(array2);
         console.log("This is the stringified array2: " + stringArray);
         console.log("This is the non-stringified array2: " + array2);
+
+        // REVERSE AN ARRAY
+        var reversedArray = array1.reverse();
+        console.log(`The reversed array for array1 is ${reversedArray}`)
+        
+        //LOOP THROUGH AN ARRAY
+        const myArray = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
+        
+        // --- Using forEach() method
+        myArray.forEach(function(item) {
+            console.log(item);
+        })        
+
+        // --- Using for...of loop
+        for (const item of myArray) {
+            console.log(item);
+        }
+
 
 
 

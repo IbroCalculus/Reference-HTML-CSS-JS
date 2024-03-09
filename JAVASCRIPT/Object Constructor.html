@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- CHECK ALSO; Constructor Function and Object (Object literal method of creating constructor) -->
+
+    <script>
+        
+        // var obj_name = new Object();    Similar to; var obj_name = {};
+        var rect2 = new Object();
+        rect2.length =5;
+        rect2.width = 10;
+        rect2.getArea = function(){
+            return this.length * this.width;
+        }
+        rect2.getPerimeter = function(){
+            return 2*(this.length * this.width)
+        }
+
+        console.log(`The width of rect2 = ${rect2.width}`)
+        console.log(`The length of rect2 = ${rect2.length}`)
+        console.log(`The area of rect2 = ${rect2.getArea()}`)
+        console.log(`The perimeter of rect2 = ${rect2.getPerimeter()}`)
+
+
+    </script>
+</body>
+</html>

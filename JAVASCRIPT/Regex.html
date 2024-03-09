@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions in JavaScript</title>
+</head>
+<body>
+        <!--
+
+         -->
+
+
+        <script>
+            /* A regular expression is a sequence of characters that forms a search pattern.
+               The search pattern can be used for text search and text replace operations..
+               Regular expressions can be used to perform all types of text search and text replace operations.
+               
+               In JavaScript, regular expressions are often used with the two string methods:
+               search() and replace().
+            */
+            
+            
+            // ================== CHAPGT Generated ================
+
+            function isValidEmail(email) {                
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;    // Regular expression for basic email validation              
+                return emailRegex.test(email);                      // Test the email against the regex
+            }
+            
+            // Example usage:
+            const email = "example#email.com";
+            if (isValidEmail(email)) {
+                console.log("Valid email address.");
+            } else {
+                console.log("Invalid email address.");
+            }
+            
+
+            // ================== USING STRING SEARCH WITH A STRING ================
+            testString = "This is a sample string for learning purpose";
+            let pos = testString.search("sample");
+            document.write(`The position of the string "sample" is  ${pos} <br>`);
+            // This will return an integer value of the start position of the string.
+
+            // ================== USING THE REPLACE METHOD ================
+
+            
+
+
+
+        </script>
+</body>
+</html>

@@ -10,12 +10,33 @@
 
 <body>
 
+    <label for="input_username"></label>
+    <input type="text" name="" id="input_username">
+    <input type="button" id="btn_submit" value="Check">
+
 
     <script>
-        fName = "Ibrahim";
+        var fName = "Ibrahim";
+        var age = 10;
 
-        var output = fName == "Ibrahim" ? "Correct" : "Incorrect";
+        var output = (fName == "Ibrahim") ? "Correct" : "Incorrect";
+        var age1 = (age <20) ? "Age is less than 20" : "Age is not less than 20"
         console.log(`The answer is: ${output}`)
+        console.log(`The age is: ${age1}`)
+
+
+        btn_submit = document.getElementById("btn_submit");
+        input_username = document.getElementById("input_username");
+
+        btn_submit.onclick = function(){
+            let username = input_username.value;
+            let value = (username == "Ibrahim") ? "Value typed is Ibrahim":"NOT Ibrahim"
+            alert(`RESULT: ${value}`)
+
+        }
+
+
+
     </script>
 </body>
 

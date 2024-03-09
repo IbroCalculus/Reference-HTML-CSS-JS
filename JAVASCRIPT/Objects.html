@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Object</title>
 
+    <!-- CHECK ALSO; Constructor function and Object Constructor -->
+
     <script>
+
+    // Objects are variables that can contain many values
+        
+    // NB: This is the Object literal way of creating objects
+    // Object.values(person)  returns all the values of person Object
+    // Object.keys(person) - returns all the keys of person object
+
         var human1 = {
             name: "Ibrahim",
             gender: "Male",
@@ -16,8 +25,8 @@
 
             //Ojbect inside an object
             address: {
-                "Home Address": "This is my home address",
-                "Office Address": "This is my office address",
+                "Home_Address": "This is my home address",
+                "Office_Address": "This is my office address",
                 "Mobile_contact": 87654325645
             },
 
@@ -35,6 +44,7 @@
 
         };
 
+        console.log(human1.address.Home_Address);
         console.log("You are welcome Mr " + human1.name + ", who is of gender: " + human1.gender);
         console.log("You are welcome Miss " + human1["name2"] + ", who is of gender: " + human1["gender2"]);
         human1.laugh();
@@ -54,7 +64,7 @@
         // PRINT OBJECT KEY-VALUE PAIRS
         console.log("JSON.stringify: " + JSON.stringify(human1));
 
-        // ADD NEW PROPERTY
+        // ADD NEW PROPERTY OR MODIFY EXISTING
         human1.surName = "Suleiman";
         human1["surName2"] = "Second SurName";
 

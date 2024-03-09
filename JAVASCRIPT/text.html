@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Text</title>
+</head>
+<body>
+
+    <h1 id="title">This title will change when you click the button</h1>
+    <button type="button" onclick="changeTitle()">Click Here</button>
+    
+
+    <script>
+        function changeTitle(){
+            let title = document.getElementById("title");
+            title.textContent = `Congratulations, this is it!!!`;
+        }
+
+    </script>
+</body>
+</html>

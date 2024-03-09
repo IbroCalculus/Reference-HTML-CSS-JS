@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Elements</title>
+</head>
+
+<style>
+    body{
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    
+    <h1>STYLING ELEMENTS IN JAVASCRIPT </h1>
+    <p id="line" style="font-weight: bold;">
+        "Once upon a time in manchester"
+    </p>
+    <p id="attributes">
+        from<a href="http//www.google.com">Google Website</a>
+    </p>
+
+    <script>
+        // STYLING SELECTED ELEMENTS
+
+        //----- Uncomment each line of code to see the changes ---------
+
+        var line = document.getElementById('line');
+        var attributes = document.getElementById('attributes');
+
+        // --- Setting one style property at a time ---
+        line.style.color = "blue";
+        // line.style.background = "red";
+        attributes.style.boxShadow = "2px 2px 5px 1px blue";
+
+
+        // --- Setting multiple style properties at a time ---
+        // NB: This will override existing inline or single style
+        line.style.cssText = "color: yellow; border: 1px solid black";
+        attributes.setAttribute("style", "color:red; border: 2px dashed red");
+
+        // --- How to view every style element you can set, with value for those already set ----
+        console.log(line.style);
+        // console.log(window.getComputedStyle(line));
+
+        console.log(line.style.color)   //View the value of color.
+
+
+    </script>
+</body>
+</html>

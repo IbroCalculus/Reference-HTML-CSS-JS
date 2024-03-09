@@ -14,7 +14,43 @@
     <P id="myPara">This is just a paragraph text</P>
     <button type="button" onclick="alert('11')" onmouseover="func2()" onmouseleave="func3()">THIS IS A BUTTON!</button>
 
+    <button type="button" onclick="print()" onmouseover="func2()" onmouseleave="func3()">CLICK HERE TO PRINT THIS PAGE</button>
+
     <script src="Test.js"></script>
+
+    <!-- <!-- <script> -->
+        <!-- var person1 = {fName:"Ibrahim", lastName:"Suleiman", "Age":84};
+        for (var x in person1){
+            document.write(`<br> ${x} :---: ${person1[x]} <br>`) -->
+        } -->
+<!-- 
+        fName = "Daniel Francis";
+        console.log(`You are welcome Mr ${fName}`); -->
+
+    <!-- </script> -->
+
+    <script>
+        var msg = "This is a cypher, encrypted message, please view by decrypting using the decryption code";
+        encMsg = msg.replace("t", "#@&^%");        
+        console.log(encMsg);
+        
+        // var person1 = {"fName":"Ibrahim", "lastName":"Suleiman", "Age":84};
+
+        // var person1 = {"fName" : "Ibrahim", "lastName": "Suleiman", "id": 453};
+        // for (var i in person1){
+        //     var j = person1[i];
+        //     console.log(`This is loop : ${i}, and the value is: ${j}....*&*&*& <br>`)
+        // }
+
+        for(var i in msg){
+            process(i);
+        }
+
+
+
+
+
+    </script>
 
 </body>
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>SELECTING AND CHANGING TEXTS IN JAVASCRIPT </h1>
+    <p>Some paragraph text</p>
+    <p class="class1">This is a paragraph with class1</p>
+
+    <div id="div1" style="border: solid blue 3px;">
+        <p>Some text in div1</p>
+        <p class="class1">Some text in div1 Class1</p>
+        <div id="div2" style="border: solid red 3px; margin: 10px;">
+            <p>Some text in div2</p>
+            <p>Some text in div2</p>
+        </div>
+    </div>   
+    <hr>
+
+
+
+    <script>
+
+        // SELECTING HTML ELEMENTS
+        var div1 = document.getElementById('div1');
+
+        var class1 = document.getElementsByClassName('class1');
+        var class1_2 = div1.getElementsByClassName('class1');
+
+        var p = document.getElementsByTagName('p');
+        var p1 = div1.getElementsByTagName('p');
+
+        var query1 = document.querySelector('p');
+        var queryAll = document.querySelectorAll('.class1, #div1');
+        var queryAll2 = document.querySelectorAll('p');
+
+
+        //CHANGING TEXTS OF SELECTED ELEMENTS
+        var text1 = "<h1>Hello World, modified by javascript!!!</h1>";
+        var text2 = "<p>This text has been modified by javascript</p>";
+
+        //----- Uncomment each line of code to see the changes ---------
+
+        // div1.innerHTML = text1;       //This will interpret text as html
+        // div1.textContent = text1;    //This will not interpret text as html, rather plain text
+
+        // query1.innerHTML = text2;
+
+        for(var i=0; i<class1.length; i++){
+            class1[i].innerHTML = text2;
+        }
+
+
+    </script>
+</body>
+</html>

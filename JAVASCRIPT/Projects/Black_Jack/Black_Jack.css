@@ -1,0 +1,55 @@
+
+body{
+    background-color: #123456;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#main{
+    /* background-color: white; */
+    background-image: url("Images/background_img.jpg");
+    width: 400px;
+    margin: auto;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 16px black;
+    
+}
+
+#black_jack{
+    text-align: center;
+    padding-top: 20px;
+    font-style: bold;
+    color: goldenrod;
+}
+
+p{
+    /* margin-left: 30px; */
+    text-align: center;
+    /* color: #C7981E; */
+    color: black;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px red;
+}
+
+#message-el{
+    font-style: italic;
+}
+
+#btnStart, #btnNewCard{
+    display: block;
+    margin: 0 auto;
+    color: #016f32;
+    width: 150px;
+    background-color: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 8px black;
+}
+
+#btnNewCard{
+    margin-top: 10px;
+}

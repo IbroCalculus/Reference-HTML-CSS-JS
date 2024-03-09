@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <!-- COOKIES vs LOCAL STORAGE vs SESSIONS
+        They are all ways to store data in the browser for use later.
+        Check the Cookies image to see differences
+
+        View in Chrome via ===> inspect =====> Application
+     -->
+
+    
+    <script>
+// ====== ADD ITEMS TO storageusing KEY-VALUE PAIR OF DATA ======
+// NB: LocalStorage and Session work similar
+        localStorage.setItem('sampleKey', 'sampleValue');
+        localStorage.setItem('sampleKey2', 'sampleValue2');
+        sessionStorage.setItem('practiceKey','PracticeValue');
+
+        var getLocalStorage = localStorage.getItem('sampleKey');
+        var getSessionStorage = sessionStorage.getItem('practiceKey');
+
+        console.log(`The value of local storage is: ${getLocalStorage}`);
+        console.log(`The value of session storage is: ${getSessionStorage}`);
+        
+// ====== REMOVE SINGLE ITEM from storage & session using KEY-VALUE PAIR OF DATA ======
+        // localStorage.removeItem('sampleKey');
+        
+// ====== REMOVE ALL ITEMS from storage & session using KEY-VALUE PAIR OF DATA ======
+        // localStorage.clear();
+
+// ====== ADD ITEMS TO COOKIES ======
+       document.cookie = "hello=true";
+       document.cookie = "fName=Ibrahim; expires=Fri, 31 Dec 2022 23:59:59 GMT+1";
+
+       console.log(document.cookie);
+
+       alert(window.history.length);
+
+        
+
+    </script>
+</body>
+</html>

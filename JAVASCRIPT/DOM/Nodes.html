@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Nodes</title>
+</head>
+<body>
+
+    <!-- Everything in HTML is a node ie:
+        - All HTML elements
+        - the texts in the element
+        - html attributes
+        - comments
+        All these form a node tree, and all nodes in the tree can be accessed by javascript
+        Nodes can be created, modified or deleted
+     -->
+
+     <div id="div1">
+        <p id="p1">This is paragraph 1</p>
+        <p id="p2">This is paragraph 2</p>
+
+        <button type="button" onclick="addElement()">Append Element to Parent Node</button>
+        <button type="button" onclick="addElement2()">Append Element to parent node (method 2)</button><br><br>
+        <button type="button" onclick="addElementB4()">Add Element Before Paragraph 2</button>
+        <button type="button" onclick="replaceElement()">Replace a Child</button>
+        <button type="button" onclick="removeElement()">Remove a Child</button>
+
+     </div>
+
+    <script>
+
+// ==================== 1. CREATED AN ELEMENT BY APPENDING TO END OF PARENT NODE (ie div1)) ====================
+// -------------------- Method 1 of adding text node to paragraph node @ end of parent node ----------------
+        function addElement(){
+            var para1 = document.createElement('p');
+            var textNode1 = document.createTextNode('This is a newly created paragraph tag');
+            para1.appendChild(textNode1);
+
+            var div1 = document.getElementById('div1');
+            div1.appendChild(para1);
+        }
+
+// -------------------- Method 2 of adding text node to paragraph node----------------
+        function addElement2(){
+            var para2 = document.createElement('p');
+            para2.innerHTML = "Just created this paragraph now";
+
+            var div1 = document.getElementById('div1');
+            div1.append(para2);
+        }
+        
+// =============== 2. ADDING A NEW NODE BEFORE A GIVEN NODE IN THE PARENT NODE =================
+function addElementB4(){
+    var para2 = document.createElement('p');
+    para2.innerHTML = "To be added top of p2";
+
+    var div1 = document.getElementById('div1');
+    var p2 = document.getElementById('p2');
+
+    div1.insertBefore(para2, p2);
+
+}
+
+// =============== 3. REPLACING A CHILD IN THE PARENT NODE =================
+function replaceElement(){
+    var para3 = document.createElement('p');
+    para3.innerHTML = "This replaced what was here";
+    para3.style.color = "red";
+
+    var div1 = document.getElementById('div1');
+    var p2 = document.getElementById('p2');
+
+    div1.replaceChild(para3, p1);
+
+}
+
+// =============== 3. REMOVING A CHILD IN THE PARENT NODE =================
+function removeElement(){
+    var div1 = document.getElementById('div1');
+    var p2 = document.getElementById('p2');
+
+    div1.removeChild(p2);
+}
+
+    </script>
+    
+</body>
+</html>

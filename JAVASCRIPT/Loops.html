@@ -7,6 +7,9 @@
     <title>Document</title>
 
     <script>
+
+        // They are 4 types of loop in javascript; ie For loop, while loop, do-while loop, for-in loop
+
         // WHILE LOOP
         var x = 0;
         while (x < 5) {
@@ -15,10 +18,35 @@
         }
         document.write("<br>");
 
+        
+        //DO WHILE LOOP
+        var x = 0;
+        do{
+            console.log(`The value of x is: ${x}`);
+            x++;
+        }
+        while(x <7);
+
         // FOR LOOP
         for (var i = 0; i <= 5; i++) {
             document.write(`FOR ${i} <br>`);
         }
+
+        // FOR IN LOOP
+        var name = "Ibrahim"
+        var person1 = {"fName":"Ibrahim", "lastName":"Suleiman", "Age":84};
+        for (var x in person1){
+            console.log(`${x} :---: ${person1[x]}`)
+        }
+                        
+
+        const myArray = ['apple', 'banana', 'orange', 'grape', 'kiwi'];        
+        //  FOR EACH METHOD
+        myArray.forEach(function(item) {
+            console.log(item);
+        }) 
+
+
 
 
     </script>

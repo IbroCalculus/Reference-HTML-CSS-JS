@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grids</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+    <div class="container border" style="margin-top: 20px;">Content</div>
+    
+    <!-- This will use the full width -->
+    <div class="container-fluid border" style="margin-top: 20px;">Content</div> 
+
+    <hr>
+
+    <div class="container-fluid bg-black text-white">
+
+        <div class="row" style="border: red 2px solid;">
+            <div class="col bg-success">Col 1</div>
+            <div class="col bg-success">Col 2</div>
+            <div class="col bg-success">Col 3</div>
+        </div>
+
+        <div class="row" style="margin-top: 10px;">
+            <div class="col">Col 11</div>
+            <div class="col">Col 12</div>
+            <div class="col">Col 13</div>
+        </div>
+        
+        <div class="row" style="margin-top: 10px;">
+            <div class="col">Col 21</div>
+            <div class="col">Col 22</div>
+            <div class="col">Col 23</div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="container-fluid bg-success text-white">
+        <div class="row">
+            <div class="col-1 border border-primary">One</div>
+            <div class="col-3 border border-info">Two</div>
+            <div class="col-2 border border-info">Three</div>
+            <div class="col-2 border border-info">Four</div>
+            <div class="col-3 border border-info">Five</div>
+            <div class="col-1 border border-info">Six</div>
+        </div>
+    </div>
+    
+    <hr>
+    <h1 style="font-size: 12px;">Targeting specific screen sizes using the grid system</h1>
+    <div class="container-fluid bg-success text-white">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12">One</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Four</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Five</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Two</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Three</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Six</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Seven</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Eight</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Nine</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Ten</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Eleven</div>
+            <div class="col-lg-3 col-md-4 col-sm-12">Twelve</div>
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

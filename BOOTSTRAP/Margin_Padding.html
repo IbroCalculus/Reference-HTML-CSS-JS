@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin & padding in Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        .customizedMargin{
+            margin: 1em 10em !important;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- mb(margin bottom), mt(margin top) ranges from mb-0 to mb-5,
+        similarly ms-5 and me-5, margin start and margin end respectively.
+
+        m-5 for margin all, p for padding all
+
+        pt & pb, padding top and padding bottom respectively,
+        similarly ps-5, and pe-5, padding start and padding end for left & right padding respectively.
+     -->
+    <div class="bg-danger text-light fw-bold mt-5 pt-2 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque perspiciatis voluptatibus quaerat,
+         maxime cum, esse dolorum, itaque sint optio quod consequuntur maiores libero amet in.
+          Architecto atque laboriosam ipsa rem!</div>
+
+    <!--  -->
+    <div class="bg-info text-light fw-bold mt-5 pt-2 pb-4 ps-5 pe-5 ms-5 me-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque perspiciatis voluptatibus quaerat,
+         maxime cum, esse dolorum, itaque sint optio quod consequuntur maiores libero amet in.
+          Architecto atque laboriosam ipsa rem!</div>
+
+    <div class="bg-warning m-5 p-5 text-center fw-bold fst-italic customizedMargin">This is a sample text within a div tag</div>
+    
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

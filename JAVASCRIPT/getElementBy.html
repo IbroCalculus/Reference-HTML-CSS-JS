@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+
     <script>
         function sayHello() {
             alert("I am saying Hello");
@@ -12,6 +15,7 @@
         // CHANGING CSS STYLES
         function getElemByID() {
             var text = document.getElementById("id1");
+            // var text = document.querySelector("#id1");  replace #id1 with .id1 if class instead of id
             text.style.color = "#ff0000";
             text.style.backgroundColor = "#123456";
             text.style.fontStyle = "italic";
@@ -37,16 +41,17 @@
         // CHANGE TEXT
         function changeText() {
             var tex4 = document.getElementsByTagName("h2");
-            tex4[0].innerHTML = "This is the New h2 header";
+            // var tex4 = document.querySelector("#h2"); replace #h2 with .h2 if class instead of id
+            tex4[0].innerHTML = "This is the New h2 header";  //Also similar is; .innerText and .textContent
         }
 
         // READ TEXT
         function replaceText() {
             var text5 = document.getElementsByClassName("para1");
-            var text5_1 = text5[0].innerHTML;
+            var text5_1 = text5[0].innerHTML;        
             var text5_2 = text5[1].innerHTML;
             var text5_3 = text5_1 + " & " + text5_2;
-            text5[2].innerHTML = text5_3;
+            text5[2].innerHTML = text5_3;   // Better to use: text5[2].textContent = text5_3;
         }
 
         // CHANGE IMAGE
@@ -61,6 +66,9 @@
 </head>
 
 <body>
+
+    <!-- NB: ALTERNATIVE TO getElementByID is querySelectore. CHECK getElementByID example in the javaScript -->
+
     <!-- NB: JavaScript is basically a 2 step process:
     1. Select the element we want to target. ie
         - getElementById

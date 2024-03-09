@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // A callback is a function that is passed as an argument to another function
+        // There are used to handle asynchronous oeprations such as:
+        // 1. Reading a file
+        // 2. Network request
+        // 3. Interacting with database
+
+
+        function hello(callback) {
+            console.log("Hello!");
+            callback();
+        }
+
+        function goodbye(){
+            console.log("Goodbye!");
+        }
+
+        hello(goodbye); // goodbye is the callback function
+
+        //====================================================
+
+        function sum(callback, x, y) {
+            let result = x + y;
+            callback(result);
+        }
+
+        function displayConsole(result){
+            console.log(`Result is: ${result}`);
+        }
+
+        sum(displayConsole, 10, 20);
+
+
+
+    </script>
+
+
+    </script>
+</body>
+</html>

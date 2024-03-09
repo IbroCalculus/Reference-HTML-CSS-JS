@@ -18,16 +18,19 @@
         7. Object,  -> Store key-value pairs
         */
 
+
         //There are 3 ways to declare a variable in JS
         /*
+        NB: Any variable that is declared without the var keyword, even within a function is a global variable
+        
         1. var variable1 = "first variable";    <- Global scope
         2. let variable2 = "second variable";   <- Local scope
         3. const pi = 3.142;                    <- Constant
         */
 
         //TO CHECK THE TYPE OF VARIABLE OR DATA TYPE
-        console.log("Data type is: " + typeof 55);
-        console.log("Data type is: " + typeof 55.4); /* This is int by default, not float*/
+        console.log("Data type is: " + typeof(55));
+        console.log("Data type is: " + typeof (55.4)); /* This is int by default, not float*/
         console.log("Data type is: " + typeof "Ibrahim");
         console.log("Data type is: " + typeof true);
 
@@ -41,6 +44,25 @@
         document.write("Welcome \n " + sName);
         console.log("Welcome " + fName + " " + sName);
 
+        document.write("<br><br>");
+        function myFunction(){
+            for(let i=0; i<5; i++){
+                document.write(i);
+            }
+
+            document.write("<br> The highest value of i is: " + i);
+        }
+        myFunction();
+        
+        var fName = "Ibrahim";
+        document.write(fName);
+
+        {
+            let fName = "Musa";
+            document.write(fName);
+        }
+
+        document.write(fName);
 
     </script>
 

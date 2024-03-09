@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing function in JavaScript</title>
+</head>
+<body>
+    <button id="btn_Time">ALERT after 2 seconds</button><br><br>
+    <button id="btn_Time2" onclick="executeFunction()">ALERT after 2 seconds</button>
+
+
+
+    <script>
+        let btn_Time = document.getElementById("btn_Time");
+        let btn_Time2 = document.getElementById("btn_Time2");
+
+        function runFunction(){
+           alert("Function executed 2 seconds after ")
+        }
+
+        runFunction2 = () => alert("!!! executed after 2 seconds")
+        
+        // ========================================================================
+        
+
+        function executeFunction(){
+            setTimeout(runFunction2, 2000)
+        }
+
+        btn_Time.addEventListener("click",executeFunction)   //2000 milliseconds, ie 2 seconds
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting form inputs</title>
+</head>
+<body>
+
+    
+    <!-- CHECK ALSO; Pop_Up.html (prompt) -->
+    <!-- CHECK: Form Validation, Reference 
+    x = document.getElementById("demo").value;  How to get value from an input box    
+-->
+<input id="input1"><br><br>
+<input id="input2"><br><br>
+<button type="button" id="btn1" onclick="addSum()">Calculate Sum</button>
+<br>
+<p id="result">Result will show here...</p><hr>
+
+
+<!-- ================================== ANOTHER METHOD ================================== -->
+<label for="username"></label>
+<input type="text" id="username" >
+<button type="button" id="btnUsername"> Get Username</button>
+
+
+<!-- <script src="Test2.js"> -->
+<!-- </script> -->
+
+    <script>
+       function addSum(){
+       let x = Number(document.getElementById("input1").value);
+       let y = Number(document.getElementById("input2").value);
+           alert(x+y)
+        //    document.getElementById("result").innerHTML = x+y;
+           document.getElementById("result").textContent = x+y;
+       }
+
+       document.getElementById("btnUsername").onclick = function(){
+        let username = document.getElementById("username").value;
+        alert(`The entered username is: ${username}`);
+       }
+    </script>
+</body>
+</html>

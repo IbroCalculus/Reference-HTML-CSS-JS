@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes In JavaScript</title>
+</head>
+<body>
+    
+
+    <script>
+        // For this, it is better to work on console for better experience
+
+        // All javascripts objects inherit properties and methods from prototypes.
+        // Date objects inherit from data.prototype
+        // Array objects inherit from array.prototype etc
+
+
+        console.log("Welcome to JavaScript");
+
+        var abc = {
+            Name : "Kaushal",
+            Subject : "JavaScript",
+            Address : "Banglore"
+        }
+
+        console.log(abc)
+
+// ------------------    --------------
+        function xyz(name, subject, Address)
+        {
+            this.name = name;
+            this.Address = Address;
+            this.subject = subject;
+        }
+        
+        var x1 = new xyz("Kaushal", "Java", "Earth");
+        console.log(x1);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor function examples</title>
+</head>
+<body>
+
+<!-- This is related to objects in javascript -->
+<!-- CHECK ALSO; Object Constructor and Object (Object literal method of creating constructor) -->
+<!-- This constructor function works like a template, or how classes work in other programming languages -->
+    <script>
+
+        // =============================================================
+
+        function cars(car_manufacturer, car_model, price){
+            this.car_manufacturer = car_manufacturer;
+            this.car_model = car_model;
+            this.price = price;
+
+            this.allwheeldrive = function(){
+                document.write("This car comes with four wheels drive")
+            }
+
+            this.allwheeldrive2 = function(year){
+                document.write(`This car was produced in the year ${year}`)
+            }
+        }
+
+        car1 = new cars("Toyota", "QR342", 50000);
+        car1.allwheeldrive();
+
+        document.write("<br>")
+
+        car2 = new cars("Benz", "PCT5644", 76000);
+        car2.allwheeldrive2("2022")
+
+
+    </script>
+    
+</body>
+</html>

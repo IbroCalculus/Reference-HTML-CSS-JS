@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // .map() accepts a callback and applies that function to each element of an array, then return a new array
+
+        // =================== Example 1 =================
+        const numbers = [1, 2, 3, 4, 5];
+        const result = numbers.map(function (number) {
+            return number * 2;
+        });
+        console.log(`SQUARE VALUE: ${result}`);     // OUTPUT: [2, 4, 6, 8, 10]
+
+
+        // =================== Example 2 =================
+        function cubeNumber(number) {
+            return number ** 3;
+        }
+        const result2 = numbers.map(cubeNumber); 
+        console.log(`CUBE VALUE: ${result2}`);
+
+        
+        // =================== Example 3 =================
+        let names = ["John","Sam", "Mary", "Denis", "Kabir", "Halima"]
+        function uppercaseName(name) {
+            return name.toUpperCase();
+        }
+        names = names.map(uppercaseName);
+        console.log(names);
+
+        
+        // =================== Example 4 =================
+        let dates = ["2024-01-12", "2023-01-23", "1994-03-28"]
+        dates = dates.map(function (date) {
+            return date.replace(/-/g,"/")
+        })
+        console.log(dates)
+
+    </script>
+
+
+    </script>
+</body>
+</html>

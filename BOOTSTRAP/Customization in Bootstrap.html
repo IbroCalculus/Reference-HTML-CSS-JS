@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization in Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        .customize-color{
+            background-color: aqua !important;
+            color: black !important;
+        }
+
+        .customized123{
+            color: grey !important;
+            background-color: blue !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- E.g to customize colors instead of only the one provided by boostrap -->
+    <h1>Non customized</h1>
+    <p class="text-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus recusandae laborum molestiae sapiente inventore placeat nostrum incidunt quo blanditiis ipsum praesentium, quis a eligendi aliquam facilis ullam. Quasi, sapiente incidunt?</p>
+
+    <h1>Non Customized</h1>
+    <p class="text-info text-bg-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus recusandae laborum molestiae sapiente inventore placeat nostrum incidunt quo blanditiis ipsum praesentium, quis a eligendi aliquam facilis ullam. Quasi, sapiente incidunt?</p>
+    
+    <h1>Customized</h1>
+    <p class="text-info text-bg-dark customize-color">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus recusandae laborum molestiae sapiente inventore placeat nostrum incidunt quo blanditiis ipsum praesentium, quis a eligendi aliquam facilis ullam. Quasi, sapiente incidunt?</p>
+
+    <h1>Customized 2</h1>
+    <p class="text-white bg-dark customized123">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptatibus? Ullam rerum ad molestias. Veniam quasi maxime, culpa similique autem nesciunt distinctio deserunt quisquam. Repellat eos commodi deserunt suscipit nesciunt?</p>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

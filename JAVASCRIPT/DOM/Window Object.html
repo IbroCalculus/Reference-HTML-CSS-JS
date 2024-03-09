@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Windows Object</title>
+</head>
+<body>
+    <p id="paraX"></p>
+
+    <button id="newWindow" onclick="openNewWindow()">Open New Window</button>
+    <button id="newWindow" onclick="closeNewWindow()">Close Newly Opened Window</button>
+    <button id="newWindow" onclick="moveNewWindow()">Move Newly Opened Window</button>
+
+    <!-- target attribute for page redirection to a new window if new window already opened -->
+    <a href="http://www.facebook.com" target="WindowYYY">Click to page redirect!</a>
+
+    <script>
+        window.addEventListener('resize', update);
+        var paraX = document.getElementById('paraX');
+        update();
+
+        // Getting the size of a windows
+        function update(){
+            var disp = `Browser inner window width = ${window.innerWidth}<br>Browser inner windows height = ${window.innerHeight}`;
+            paraX.innerHTML = disp;
+        }
+
+
+        // ================= OPENING & CLOSING A NEW WINDOW ===================
+        var newWindowObj
+        function openNewWindow(){
+            // The url can be blank, ie "", "WinodowYYY"
+            newWindowObj = window.open("http://www.google.com", "WindowYYY", 
+            "menubar=true, width=400, height=300");
+        }
+
+        function closeNewWindow(){
+            newWindowObj.close();
+        }
+
+        // =============== REDIRECTING A PAGE TO NEW WINDOW ============
+        // ------Check target attribute of the anchor tag within the html
+
+
+        // ============== MOVE NEW WINDOW ================
+        function moveNewWindow(){
+            newWindowObj.moveBy(50,0);
+            newWindowObj.focus();
+        }
+
+
+    </script>
+</body>
+</html>

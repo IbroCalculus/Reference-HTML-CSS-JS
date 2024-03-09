@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Counter App</title>
+
+    <link rel="stylesheet" href="Passenger_Counter.css">
+
+</head>
+<body>
+
+    <main>
+        <h1>People Entered: </h1>
+        <h2 id="count_el">0</h2>
+        <button type="button" id="btn_increment" style="background-color: darkred;" onclick="incrFunc()">INCREMENT</button>
+        <button type="button" id="btn_decrement" style="background-color: darkgreen;" onclick="decrFunc()">DECREMENT</button>
+        <button type="button" id="btn_save" style="background-color: darkblue;" onclick="saveFunc()">SAVE</button>
+        <p id="save_el">Previous entries: </p>
+    </main>
+    
+
+    <script src="Passenger_Counter.js">
+    </script>
+</body>
+</html>

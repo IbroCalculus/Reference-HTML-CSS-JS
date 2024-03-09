@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Validation</title>
+</head>
+<body>
+
+    <form action="Form Validation2.html" onsubmit="return validateDetails()">   <!--validate execute only if it returns true. Check .js-->
+        <input type="text" name="" id="username" placeholder="Enter username" required>  <!-- required -> the field must not be empty -->
+        <input type="password" name="" id="pswd" placeholder="Enter password">
+        <input type="number" name="" id="age" placeholder="Enter your age">
+        <input type="submit" value="Submit Details">
+    </form>
+
+    <script>
+
+        function validateDetails(){
+            let username = document.getElementById("username");
+            let pswd = document.getElementById("pswd"); 
+            let age = document.getElementById("age");
+            
+            let usernameVal = username.value;
+            let pswdVal = pswd.value;
+            let ageVal = age.value;
+
+            if(usernameVal.trim() == "" || pswdVal.trim() == "" || ageVal.trim() == "")
+            {
+                alert("Some field(s) empty")
+                return false;
+            }
+            else if(usernameVal == "user" && pswdVal == "1234" && ageVal == 5)
+            {
+                alert("Correct login details")
+                return true;
+            }
+            else
+            {
+                alert("Wrong login Details")
+                return false;
+            }
+        }
+
+        function showDetails(){
+            let username = document.getElementById("username");
+            let pswd = document.getElementById("pswd");
+
+            let disp = `username: ${username}; \n password: ${pswd}`
+            alert(disp)
+        }
+    </script>
+    
+</body>
+</html>

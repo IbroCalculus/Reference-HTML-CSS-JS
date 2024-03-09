@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operators</title>
+</head>
+<body>
+    
+    <!-- 
+        This is represented by 3 dots (...). 
+        It allows an iterable such as an array or string to be expanded into separate elements. (ie unpack the elements).
+
+        SIMILARLY, CHECK: RestParameter.html. When used in a function, this is similar to python's kwarg function
+     -->
+
+    <script>        
+        let numbers = [90, 78, 56, 29, 5.8];
+        let fullName = "John Samuel Smith";
+
+
+        console.log(Math.max(numbers));             // This will not work because the values need to be unpacked
+        console.log(Math.max(...numbers));
+
+        console.log(...fullName);
+        console.log([...fullName].join("<="));
+
+
+
+    </script>
+</body>
+</html>

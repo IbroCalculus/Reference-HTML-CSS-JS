@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects 2</title>
+</head>
+<body>
+    <!-- CHECK ALSO; Constructor Function and Object Constructor -->
+
+
+    <!-- Objects are variables too. But objects can contain many values. -->
+    <h1>Objects in JavaScript</h1>
+</body>
+
+
+<script>
+
+    // NB:
+    // Object.values(person)  returns all the values of car Object
+    // Object.keys(person) - returns all the keys of person object
+
+
+    // Non-object way of storing these data for a single car
+    var car_manufacturer = "Audi";
+    var car_model = "Q7";
+    price = 50000;
+
+    function allwheeldrive()
+    {
+        document.write("This car comes with quattro all-wheel drive");
+    }
+
+    allwheeldrive();
+
+    // Using objects instead, 2 ways of creating an object in javascript
+
+    // --- Method 1. Literal way (Literal object way) ---------
+    var car = {
+        car_manufacturer : "Audi",
+        car_model : "Q7",
+        price : 50000,
+
+        allwheeldrive : function()
+        {
+            console.log("This car comes with four wheel drive");
+        }
+    }
+// -------------------------------
+    var car1 = {
+        car_manufacturer : "Toyota",
+        car_model : "M3",
+        price : 53000,
+
+        allwheeldrive : function()
+        {
+            console.log("This car is of Toyota product");
+        }
+    }
+
+    console.log(car.allwheeldrive());
+    console.log(car.car_manufacturer);
+
+    console.log(car1.allwheeldrive());
+    console.log(car1.car_manufacturer);
+
+    // Add more properties to an object and methods/functions
+    car.car_color = "Black";
+
+    car.newFunc = function()
+     {
+         console.log("This is a new function")
+    }
+
+    
+    // --- Method 2. Construction Function (CHECK: Constructor Function) ---------
+
+    // --- How to convert a datatype into a string (ie Object Constructor) ------
+    var testString = new String()
+    console.log(`testString is of datatype: ${typeof(testString)}`)
+
+    testString.lengthX = 5;
+    testString.widthX = 21;
+    testString.getArea = function()
+    {
+        return this.lengthX * this.widthX
+    }
+
+    console.log(`Area = ${testString.getArea()}`)
+
+
+</script>
+
+</html>

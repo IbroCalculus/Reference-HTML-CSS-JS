@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const minNum = 1;
+        const maxNum = 100;
+        const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+
+        let attempts = 0;
+        let guess;
+        var running = true;
+
+        while(running) {
+            guess = Number(prompt(`Guess a number between ${minNum} and ${maxNum}`));
+            
+            if(isNaN(guess)) {
+                alert('Please enter a number');
+                continue;
+            }
+            else if(guess < minNum || guess > maxNum) {
+                alert('Please enter a number between '+ minNum +' and '+ maxNum);
+                continue;
+            }else{
+                attempts++;
+                if(guess === answer) {
+                    running = false;
+                    alert(`You got it! after ${attempts} attempts`);
+                }else if( guess < answer){
+                    alert('Too low');
+                }else if( guess > answer){
+                    alert('Too high');
+                }
+            }
+
+            <!-- running = false; -->
+        }
+
+    </script>
+</body>
+</html>

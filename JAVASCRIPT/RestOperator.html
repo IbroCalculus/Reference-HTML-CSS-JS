@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+    
+
+    <script>
+        function myFunction(...args) {
+            for (let i = 0; i < args.length; i++) {
+                console.log("Argument " + (i + 1) + ": " + args[i]);
+            }
+        }
+        
+        // Call the function with named arguments
+        myFunction('a', 'b', 'c', 'd'); // Passing 4 arguments
+        myFunction(1, 2, 3); // Passing 3 arguments
+        myFunction(); // Passing no arguments
+        
+    </script>
+</body>
+</html>

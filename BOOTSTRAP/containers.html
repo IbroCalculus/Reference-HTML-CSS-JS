@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Containers</title>
+
+    <style>
+        .col, .columnss{
+            background-color: #33b5a5;
+            padding: 1rem;
+            border: 2px solid #ffffff;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <!-- 
+        Bootstrap 5 requires a containing element to wrap site contents.
+        There are two container classes to choose from:
+
+        1. The .container class provides a responsive fixed width container
+         --- Note that its width (max-width) will change on different screen sizes: Check w3school reference
+
+        The .container-fluid class provides a full width container (100%), spanning the entire width of the viewport
+        --- 
+     -->
+
+     <!-- <div class="container-fluid border" style="margin-top: 10px;">  Full width-->
+     <div class="container border" style="margin-top: 10px;">
+        <div class="row">
+            <div class="col-6 columnss">Col 1</div>
+            <div class="col-4 columnss">Col 2</div>
+            <div class="col">Col 3</div>
+        </div>
+        <div class="row">
+            <div class="col-6 columnss">Col 1</div>
+            <div class="col-4 columnss">Col 2</div>
+            <div class="col">Col 3</div>
+        </div>
+     </div>
+
+     <!-- ============================ CONTAINER PADDING, GUTTER MARGIN, BORDER & COLOR ============================
+        By default, containers have left and right padding, with no top or bottom padding.
+        USE pt-5 for padding, my-5 for margin, g-5 for gutter (inside row), border for border and colors as shown below;
+
+        <div class="container p-5 my-5 g-5 border bg-dark text-white">
+     -->
+
+
+     <!-- ============================= RESPONSIVE CONTAINERS ============================
+        You can use the .container-sm|md|lg|xl classes to determine when the container should be responsive.
+        The max-width of the container will change on different screen sizes/viewports:
+
+     -->
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
