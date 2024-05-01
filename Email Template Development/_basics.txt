@@ -1,0 +1,67 @@
+1. Photos to be used must be referenced online, not locally
+   image hosting resources: pexels.com, iconfinder.com, imgbb.com, mailchimp.com, googledrive.com (NOT recommended), etc.
+
+
+2. Email Testing Services:
+   . Litmus Putsmail: https://putsmail.com (100% free, send to own email)
+   . Testi@: https://testi.at (2 free email clients "Outlook 2021 & Yahoo on Google chrome", no trial expiration) ---> Best pricing
+    
+    --- Paid ---
+   . EOA: https://www.emailonacid.com (7 days, limited testing, CC Req.) ---> Best HTML email articles
+   . Litmus: https://www.litmus.com (7 days, limited testing, CC Req.) ---> Best community & integration
+
+======= Some tools/ terms related to email marketing (concepts) ========
+- Email Service Provider Platforms (ie Mailchimp)
+- Email Spam Laws: ie CAN-SPAM, CASL & GDPR Laws
+- Email Deliverability (to avoid ending up in spam)
+- Merge Tags in ESPs (ie Adding a subscriber's first name)
+
+====== 2 categories of emails; 
+   1. Marketing email
+   2. Transactional email
+
+===== Email Service Provider (ESP) =====
+- An email service provider is a service provider that enables marketers to send email marketing campaigns to a list of users (subscribers).
+  Subscribers join these lists by opting in to receive marketing messages.
+- An ESP provides email and text message distribution, subscribers list management, statistics and more.
+
+-----------------------------
+- Some ESPs: Mailchimp, Brevo, mailer, Hubspot etc.
+
+------------------- Some anti-Spam Laws ---------------
+-1. CAN - SPAM: United States/FTC (Federal Trade Commision) Law
+-2. CASL: Canadian Anti-Spam Law
+-3. General Data Privacy Regulation for the EU and Europe
+These anti-spam laws set rules and regulations for commercial emails and text messages, give recipients the right to have you stop emailing them, and explain the penalties for violations.
+
+---------------- Merge Tags --------------------
+These are placeholders or variables that represent information about the subscriber.
+The information about the subscriber comes from a CSV file with all the subscribers details.
+Example of merger tag info are: First Name, Last Name, City, Birthday, Interests, and other info the subscriber has provided through interactions.
+
+
+============== EMAIL TEMPLATE SIZING BEST PRACTICES =================
+Template Width: 600px/640px - 800px
+Template Height: up to 3,000px
+Template File Size: up to 100kb
+Template Desing Tips:
+   - Email Header up to 200px
+   - Important details at first 350px in Height
+   - Using Responsive Designs
+   - Not using images to display all content
+
+=============== EMAIL DESIGN INSPIRATION RESOURCES ===========
+https://reallygoodemails.com
+https://www.bettr.email
+https://www.emaillove.com
+
+Other resources:
+   - Pinterest
+   - Dribbble
+   - ESP & Email Testing Articles
+
+======= EMAIL ACCESSIBILITY ===========
+This is the practice of designing and coding emails that are easily understood by people with the following constraints:
+ - Visual impairment (Contrast friendly & design)
+ - Cognitive or Neurologically impaired (no flashing)
+ - Physical Limitations (screen reader friendly with use of text - also applying to visual problems)

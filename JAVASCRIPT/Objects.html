@@ -7,6 +7,7 @@
     <title>JavaScript Object</title>
 
     <!-- CHECK ALSO; Constructor function and Object Constructor -->
+    <!-- CHECK ALSO: Destructuring.html -->
 
     <script>
 
@@ -30,8 +31,9 @@
                 "Mobile_contact": 87654325645
             },
 
+
             laugh() {
-                document.write(" I am laughing ");
+                document.write(`I am laughing. The name is  ${this.name} and gender is ${this.gender`);
             },
 
             eat: function () {
@@ -41,6 +43,8 @@
             dance: function (x) {
                 document.write("Mr " + x + " is dancing")
             }
+
+
 
         };
 

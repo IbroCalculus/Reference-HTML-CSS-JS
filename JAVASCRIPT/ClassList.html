@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+
+    <style>
+        #myButton{
+            font-size: 1rem;
+            margin: 1opx;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+
+        .enabled{
+            background-color: hsl(204, 100%, 50%);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="myButton">My Button</button>
+    
+    <script>
+        /*
+        ClassList is an html element property in JavaScript used to interact with an element's list of classes (CSS classes).
+        It allows you to make reusable classes for many elements across your webpage.
+        ie: add(), remove(), toggle(),, contains(), etc.
+        */
+
+        let state = 0;
+        const myButton = document.getElementById("myButton");
+        myButton.addEventListener("click", function(event){
+            if(state === 0){
+                event.target.classList.add("enabled");
+                state = 1;
+            }else{
+                event.target.classList.remove("enabled");
+                state = 0;
+            }
+        });
+
+
+    </script>
+</body>
+</html>

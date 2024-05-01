@@ -80,6 +80,45 @@
             console.log(item);
         }
 
+        // ====== DESTRUCTURING (Destructuring in JavaScript is a convenient way to extract multiple values from arrays or objects into distinct variables) ---
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Extracting values from the array
+        const [first, second, , fourth, ...others] = numbers;
+
+        console.log(first);  // Output: 1
+        console.log(second); // Output: 2
+        console.log(fourth); // Output: 4.  The third element is skipped using a comma ,
+        console.log(others); // Output: [5, 6, 7, 8, 9, 10]
+
+
+        // ============= SORTING ================
+        const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+        fruits.sort();                              // Sort alphabetically
+        console.log(fruits.sort().reverse());       // Sort alphabetically in reverse
+
+       
+        // ============= SHUFFLE AN ARRAY ===========
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Shuffle the array
+        const shuffledArray = shuffleArray(array);
+        console.log(`SHUFFLED ARRAY: ${shuffledArray}`);
+
+
+        
+
+
 
 
 

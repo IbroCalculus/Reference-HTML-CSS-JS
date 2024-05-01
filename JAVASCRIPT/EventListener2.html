@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Event listener</title>
+</head>
+<body>
+    
+
+    <script>
+        // This are basically, keydown and keyup events
+
+        let valuePressed = "";
+        document.addEventListener("keydown", function(event){
+            //console.log(event);
+            //console.log(event.key);
+            valuePressed += event.key;
+            console.log(valuePressed);
+        });
+
+        document.addEventListener("keyup", function(event){
+            //console.log(event);
+            //console.log(event.key);
+            console.log("Keyup: " + event.key);
+        });
+    </script>
+
+    </script>
+</body>
+</html>

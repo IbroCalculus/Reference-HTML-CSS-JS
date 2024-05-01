@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Reference</title>
+</head>
+<body>
+
+    <p>A sample body</p>
+    
+
+    <script>
+        /*
+        DOM: Is a javascript obejct that represents the the page you see in the web browser and provides
+        you with the API to interact with it.
+        Web browsers constructs the DOM when it loads an HTML document, and structures all the elements
+        in a tree-like representation.
+        JavaScript can access the DOM to dynamically change the content, structure and style of a web page.
+        */
+
+        console.log(document);
+        console.log(dir(document)); // Show all the properties inside the document
+        console.log(document.body);
+        console.log(document.head);
+        console.log(document.title);
+        document.title = "Modified DOM Reference title";
+        console.log(document.title);
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = "Modified DOM Reference body";
+        console.log(document.body.innerHTML);
+        document.body.style.backgroundColor = "hsl(250, 90%, 75%)";
+
+    </script>
+</body>
+</html>

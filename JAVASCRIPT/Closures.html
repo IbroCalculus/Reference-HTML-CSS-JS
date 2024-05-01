@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    
+
+    <script>
+        // A closure is a function defined inside of another function. The inner function has access to the variables and scope of the outer function.
+        // It allows for private variables and state maintainance used frequently in JS frameworks: ie: React, Vue, Angular.
+
+        function outerFunction() {
+            const outerVariable = 'I am from outerFunction';
+        
+            function innerFunction() {
+                console.log(outerVariable); // innerFunction has access to outerVariable
+            }
+        
+            return innerFunction;
+        }
+        
+        const myFunction = outerFunction(); // Call outerFunction and assign the returned function to myFunction
+        myFunction(); // Output: "I am from outerFunction"
+        
+
+    </script>
+</body>
+</html>

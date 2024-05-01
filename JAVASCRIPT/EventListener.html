@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listeners in JS</title>
+</head>
+<body>
+
+    <!-- CHECK ALSO: EventListener2.html for Key Events. This is for mouse events-->
+    
+    <input type="text" id="input_Test"><br><br>
+    <button id="btn_Test"> Click here to test this button</button><br><br>
+    <button id="btn_Test1_2"> Btn Test1_2</button><br><br>
+    <button id="btn_Test2" onclick="runFunction()"> Click here to test this second button</button>      <!-- METHOD 1 -->
+
+    <h5>Show and Hide element</h5>
+    <img src="Media/me.png" alt="" srcset="" width="100px" id="imageViewer"><br>
+    <button id="hide_show_toggle">Hide</button>
+
+
+    <script>
+        let input_Test = document.getElementById("input_Test");
+        let btn_Test = document.getElementById("btn_Test");
+        let btn_Test1_2 = document.getElementById("btn_Test1_2");
+        let btn_Test2 = document.getElementById("btn_Test2");
+
+        let imageViewer = document.getElementById("imageViewer");
+        let hide_show_toggle = document.getElementById("hide_show_toggle");
+
+        // ============ METHOD 2 ================
+        // NB: Apart from "click", there are others, ie dblclick, drag, keydown, keypress etc.
+        btn_Test.addEventListener("click", function(event){
+            let input_TestData = input_Test.value;
+            console.log(`You entered the text ${input_TestData}`)
+            input_Test.value = "";
+        })
+
+        // ======= METHOD 2B ==============
+        function callAlert2B(event){
+            console.log(event)
+            console.log(event.type)
+            console.log(`click location: ${event.clientX}, ${event.clientY}`)
+            event.target.style.backgroundColor = "tomato";
+            event.target.textContent = "This was just clicked!!!";
+        }
+        btn_Test1_2.addEventListener("click", callAlert2B)
+        btn_Test1_2.addEventListener("mouseout", event => {
+            console.log("Mouse out");
+            event.target.style.backgroundColor = "yellow";
+            event.target.textContent = "Btn Test1_2";
+        })
+
+
+        // -------- This is used in METHOD 1 ---------
+        function runFunction(){            
+            let input_TestData = input_Test.value;
+            console.log(`You entered the text ${input_TestData}`)
+        }
+
+
+
+        // ============= METHOD 3 ==================
+
+        btn_Test.onclick = function(){
+            alert("This has been clicked!")
+        }
+
+        // ============= METHOD 3B =============
+        function callAlert(){
+            alert("This is an alert clicked")
+        }
+        btn_Test.onclick = callAlert
+
+
+        // ============= HIDE AND SHOW ELEMENT =================
+        hide_show_toggle.onclick = function(event){
+            imageViewer.style.display = imageViewer.style.display === "block"? "none" : "block";
+            event.target.textContent = imageViewer.style.display === "block"? "Hide" : "Show";
+        }
+    </script>
+</body>
+</html>

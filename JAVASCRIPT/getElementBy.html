@@ -5,68 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-
-
-    <script>
-        function sayHello() {
-            alert("I am saying Hello");
-        }
-        // CHANGING CSS STYLES
-        function getElemByID() {
-            var text = document.getElementById("id1");
-            // var text = document.querySelector("#id1");  replace #id1 with .id1 if class instead of id
-            text.style.color = "#ff0000";
-            text.style.backgroundColor = "#123456";
-            text.style.fontStyle = "italic";
-        }
-        function getElemByTagName() {
-            var text2 = document.getElementsByTagName("h1");
-            text2[0].style.fontStyle = "italic";
-            text2[1].style.color = "#987654";
-
-            for (var i = 0; i < text2.length; i++) {
-                text2[i].style.backgroundColor = "yellow";
-            }
-        }
-        function getElemByClassName() {
-            var text3 = document.getElementsByClassName("class1");
-            for (var i = 0; i < text3.length; i++) {
-                text3[i].style.fontStyle = "italic";
-                text3[i].style.color = "#fff";
-                text3[i].style.backgroundColor = '#000';
-            }
-        }
-
-        // CHANGE TEXT
-        function changeText() {
-            var tex4 = document.getElementsByTagName("h2");
-            // var tex4 = document.querySelector("#h2"); replace #h2 with .h2 if class instead of id
-            tex4[0].innerHTML = "This is the New h2 header";  //Also similar is; .innerText and .textContent
-        }
-
-        // READ TEXT
-        function replaceText() {
-            var text5 = document.getElementsByClassName("para1");
-            var text5_1 = text5[0].innerHTML;        
-            var text5_2 = text5[1].innerHTML;
-            var text5_3 = text5_1 + " & " + text5_2;
-            text5[2].innerHTML = text5_3;   // Better to use: text5[2].textContent = text5_3;
-        }
-
-        // CHANGE IMAGE
-        function changeImage() {
-            // var image = document.getElementById("myImage");
-            // image.src = "Media/me2.jpg";
-            var image = document.getElementsByTagName("img");
-            image[0].src = "Media/me2.jpg";
-        }
-
-    </script>
 </head>
 
 <body>
 
+    <!-- CHECK ALSO: Add_Change_HTML.html -->
     <!-- NB: ALTERNATIVE TO getElementByID is querySelectore. CHECK getElementByID example in the javaScript -->
 
     <!-- NB: JavaScript is basically a 2 step process:
@@ -74,6 +17,13 @@
         - getElementById
         - getElementsByTagName
         - getElementsByClassName
+        - querySelector
+        - querySelectorAll
+
+        NB: querySelector() will select the first element that matches the selector out of the array
+        NB: querySelectorAll() will select all the elements that match the selector out of the array
+
+        ie: 
 
     2. Change whatever it is we want to change. ie:
         - CSS styles
@@ -110,6 +60,71 @@
     <!-- CHANGING IMAGE -->
     <img src="Media/me.png" alt="HHH" width="200px" height="200px" id="myImage" style="display: block;">
     <button onclick="changeImage()" style="margin-top: 10px;">CHANGE IMAGE</button><br><br>
+
+    
+    <script>
+        function sayHello() {
+            alert("I am saying Hello");
+        }
+        // CHANGING CSS STYLES
+        function getElemByID() {
+            var text = document.getElementById("id1");
+            // var text = document.querySelector("#id1");  replace #id1 with .id1 if class instead of id
+            text.style.color = "#ff0000";
+            text.style.backgroundColor = "#123456";
+            text.style.fontStyle = "italic";
+        }
+        function getElemByTagName() {
+            var text2 = document.getElementsByTagName("h1");
+            text2[0].style.fontStyle = "italic";
+            text2[1].style.color = "#987654";
+
+            for (var i = 0; i < text2.length; i++) {
+                text2[i].style.backgroundColor = "yellow";
+            }
+            // ================= OR ===================
+            /*
+            for( let i of  text2){
+                i.style.fontStyle = "italic";
+                i.style.color = "#987654";
+                i.style.backgroundColor = "yellow";
+            }
+            */
+        }
+        function getElemByClassName() {
+            var text3 = document.getElementsByClassName("class1");
+            for (var i = 0; i < text3.length; i++) {
+                text3[i].style.fontStyle = "italic";
+                text3[i].style.color = "#fff";
+                text3[i].style.backgroundColor = '#000';
+            }
+        }
+
+        // CHANGE TEXT
+        function changeText() {
+            var tex4 = document.getElementsByTagName("h2");
+            // var tex4 = document.querySelector("#h2"); replace #h2 with .h2 if class instead of id
+            tex4[0].innerHTML = "This is the New h2 header";  //Also similar is; .innerText and .textContent
+        }
+
+        // READ TEXT
+        function replaceText() {
+            var text5 = document.getElementsByClassName("para1");
+            var text5_1 = text5[0].innerHTML;        
+            var text5_2 = text5[1].innerHTML;
+            var text5_3 = text5_1 + " & " + text5_2;
+            text5[2].innerHTML = text5_3;   // Better to use: text5[2].textContent = text5_3;
+        }
+
+        // CHANGE IMAGE
+        function changeImage() {
+            // var image = document.getElementById("myImage");
+            // image.src = "Media/me2.jpg";
+            var image = document.getElementsByTagName("img");
+            image[0].src = "Media/me2.jpg";
+        }
+
+    </script>
 
 </body>
 

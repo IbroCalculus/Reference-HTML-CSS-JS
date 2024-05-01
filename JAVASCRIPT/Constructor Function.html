@@ -15,7 +15,7 @@
 
         // =============================================================
 
-        function cars(car_manufacturer, car_model, price){
+        function Car(car_manufacturer, car_model, price){
             this.car_manufacturer = car_manufacturer;
             this.car_model = car_model;
             this.price = price;
@@ -29,12 +29,12 @@
             }
         }
 
-        car1 = new cars("Toyota", "QR342", 50000);
+        car1 = new Car("Toyota", "QR342", 50000);
         car1.allwheeldrive();
 
         document.write("<br>")
 
-        car2 = new cars("Benz", "PCT5644", 76000);
+        car2 = new Car("Benz", "PCT5644", 76000);
         car2.allwheeldrive2("2022")
 
 

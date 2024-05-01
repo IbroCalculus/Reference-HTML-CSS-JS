@@ -10,20 +10,121 @@
 
 
     <script>
-        class Car{
-            constructor(car_name, year)
+        class Vehicle{
+
+            static amount = 1000;
+
+            constructor(vehicle_name, year)
             {
-                this.car_name = car_name;
+                this.vehicle_name = vehicle_name;
                 this.year = year;
+                Vehicle.amount++;
             }
 
-            age(){
-                return "The car is 2 years old";
+            aboutTheVehicle(){
+                return `The Vehicle name is ${this.vehicle_name} and the year is ${this.year}`;
             }
         }
         
-        var myCar1 = new Car("Toyota", 2022);
-        var car_age = myCar1.age();
+        var myVehicle1 = new Vehicle("Toyota", 2022);
+        var myVehicle2 = new Vehicle("Honda", 2048);
+        
+        var Vehicle_info = myVehicle1.aboutTheVehicle();
+        console.log(`Vehicle_info: ${Vehicle_info}. And the static amount is ${Vehicle.amount}`);
+        
+
+        // ============= INHERITANCE =============================
+        class Car extends Vehicle{
+            constructor(vehicle_name, year, cost) {
+                super(vehicle_name, year);
+                this.cost = cost;
+            }
+            
+            aboutTheVehicle() {
+                return `${super.aboutTheVehicle()} and the cost is ${this.cost}`;
+            }
+        }
+
+        let car1 = new Car("Mazda", 2018, 5000);
+        console.log(car1.aboutTheVehicle());
+
+
+        // ================ MORE ON INHERITANCE ===================================
+        class Bike extends Vehicle {
+            constructor(vehicle_name) {
+                super(vehicle_name);
+            }
+            
+            aboutTheVehicle() {
+                return `The Vehicle name is ${this.vehicle_name}`;
+            }            
+        }
+        
+        const bike = new Bike("Mountain Bike");
+        console.log(bike.aboutTheVehicle()); // Output: The Vehicle name is Mountain Bike
+
+
+        // ================ GETTERS AND SETTERS ===================================
+        class Car2 {
+            constructor(make, model, year) {
+                this._make = make;
+                this._model = model;
+                this._year = year;
+            }
+            
+                // Getter for make
+                get make() {
+                    return this._make;
+                }
+
+                // Setter for make
+                set make(newMake) {
+                    this._make = newMake;
+                }
+
+                // Getter for model
+                get model() {
+                    return this._model;
+                }
+
+                // Setter for model
+                set model(newModel) {
+                    this._model = newModel;
+                }
+                
+                // Getter for year
+                get year() {
+                    return this._year;
+                }
+
+                // Setter for year
+                set year(newYear) {
+                    if (typeof newYear === 'number' && newYear >= 1900 && newYear <= new Date().getFullYear()) {
+                        this._year = newYear;
+                    } else {
+                        console.log("Invalid year");
+                    }
+                }
+        }
+
+        // Create an instance of the Car2 class
+        const myCar = new Car2("Toyota", "Camry", 2022);
+
+        // Get values using getters
+        console.log("Make:", myCar.make); // Output: Toyota
+        console.log("Model:", myCar.model); // Output: Camry
+        console.log("Year:", myCar.year); // Output: 2022
+
+        // Set values using setters
+        myCar.make = "Honda";
+        myCar.model = "Accord";
+        myCar.year = 2010;
+
+        // Get updated values using getters
+        console.log("Make:", myCar.make); // Output: Honda
+        console.log("Model:", myCar.model); // Output: Accord
+        console.log("Year:", myCar.year); // Output: 2010
+       
 
 
     </script>

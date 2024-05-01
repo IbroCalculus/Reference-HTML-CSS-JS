@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList</title>
+
+    <style>
+        .myButtons{
+            font-size: 1rem;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            background-color: hsl(205, 100%, 60%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="myButtons">Button 1</button>
+    <button class="myButtons">Button 2</button>
+    <button class="myButtons">Button 3</button>
+    <button class="myButtons">Button 4</button>
+
+
+    <script>
+        /*
+        Nodelist: 
+        - A static collection of HTML elements by (id, class, element).
+        - Can be created by using querySelectorAll()
+        - Similar to an array, but no (map, filter, reduce)
+        - Won't update to automatically reflect changes to
+        */
+
+        let myButtons = document.querySelectorAll(".myButtons");
+        console.log(myButtons);
+
+        /*
+        for (let i = 0; i < myButtons.length; i++) {
+            myButtons[i].addEventListener("click", function () {
+                console.log(this);
+            });
+        }
+        */
+
+        let hue = 50;
+        let saturation = 50;
+        let lightness = 50;
+        myButtons.forEach(myButton => {
+            hue += 100;
+            saturation += 20;
+            lightness += 10;
+            myButton.style.backgroundColor = `hsl(${hue}, ${lightness}%, ${lightness}%)`;
+        })
+
+
+        const newButton = document.createElement("button");
+        newButton.textContent = "Button 5";
+        newButton.classList = "myButtons";
+        document.body.appendChild(newButton);
+
+        myButtons.forEach(myButton => {
+            myButton.addEventListener("click", function (event) {
+                event.target.remove();
+            });
+        });
+
+    </script>
+
+    </script>
+
+    </script>
+    
+</body>
+</html>

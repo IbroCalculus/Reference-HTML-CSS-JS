@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+<body>
+    
+    <script>
+        try{
+            let num1 = Number(prompt("Number 1"));
+            let num2 = Number(prompt("Number 2"));
+            if (num2 === 0){
+                throw new Error("CANNOT divide by zero");
+            }
+
+            if(isNaN(num1) || isNaN(num2)){
+                throw new Error("Value must be a number");
+            }
+
+            let result = num1 / num2;
+            console.log(`The answer = ${result}`);
+
+        }catch(error) {
+            console.error(`Error occurred of type: ${error.message}`);
+        }finally {
+            console.log("This is a finally message");
+        }
+
+    </script>
+</body>
+</html>

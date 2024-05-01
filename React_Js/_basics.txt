@@ -1,0 +1,89 @@
+React is a JavaScript library for building user interfaces for web applications. It
+It uses components.
+
+ ==== INSTALLATIONS ========
+ - Install nodejs
+ - Within the directory where you want every project to be created, in terminal, run command: npm create vite@latest
+   (vite@latest is a development server for creating react app)
+   Project name: » my-react-app
+   React
+   JavaScript   
+    cd my-react-app
+    npm install
+    npm run devc
+
+    http://localhost:5173/
+    stop: Ctrl-C
+    Restart: npm run dev
+
+    ======== Project Structure/Folders =====
+
+- node_modules: Contains external libraries/packages that the project depends on.
+- public: Contains public assets, ie fonts, videos, images etc. which are NOT bundled with the app during final output.
+- src: The main source of the project
+- src: -> assets: Similar to public, but files within are bundled during final output.
+       -> main.jsx:   This acts as the main jsx file
+       -> index.html: This acts as the index.html file, entry point of the app.
+       -> index.css:
+       -> App.jsx:
+       -> App.css: 
+- package.json: Contains project's meta data
+
+
+    ================== Working a project ==================
+    We work mainly by editing the App.jsx component. We create and add new components to it, and it is in turn called in main.jsx
+
+    --- Basic structure of App.jsx:    
+      function App() {
+
+        return (
+          <>
+          </>
+        )
+      }
+      export default App
+
+      We add other components to the App.jsx component
+
+    -------- Creating and Adding New components to App.jsx-------------
+    --- 1. ie Header.jsx ----    
+    function Header() {
+        return (
+            <>
+            <header>
+                <h1>My Website</h1>
+            </header>
+
+            </>
+        );
+    }
+    export default Header;
+
+  --- 2. ie Footer.jsx ----
+    function Footer(){
+        return (
+            <>
+            <h1>This is a footer</h1>
+            </>
+        );
+    }
+    export default Footer;
+
+
+    --- In App.jsx ---    
+    import Header from "./Header"
+    import Footer from "./Footer"
+
+    function App() {
+
+      return (
+        <>
+        <h1>Welcome to thi</h1>
+        <Header />
+        <Header></Header>
+        <Footer />  
+        </>
+      )
+    }
+    export default App
+

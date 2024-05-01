@@ -8,6 +8,9 @@
 <body>
     
     <p id="testParagraph"></p>
+    <button type="button" id="countdownButton" onclick="countdown()">Begin Countdown</button>
+    <button type="button" id="stopCountdownButton" onclick="stopCountdown()">STOP Countdown</button>
+    <p id="countdownLabel"></p>
 
     <script>
 
@@ -17,11 +20,70 @@
         setTimeout(callbackFunction, 3000);                 // timeout after 3 seconds
 
 
+        // =========== USING ARROW AND ANONYMOUS FUNCTION SYNTAX =================
+        setTimeout(() => {
+            console.log('Delayed message');
+        }, 2000);
+
         // Example 2:
         let testParagraph = document.getElementById("testParagraph");
         setTimeout(function(){
             testParagraph.textContent = "This is just for demo purpose, displayed after 5 seconds"
-        }, 5000); // timeout after
+        }, 5000); // timeout after 5 seconds
+
+
+
+        // =========== CANCELLING A TIMEOUT (Use clearTimeout method) =================
+        const timeoutId = setTimeout(function() {
+            console.log('This message will not be displayed');
+        }, 2000);
+        
+        clearTimeout(timeoutId); // Cancel the timeout        
+
+
+        // =========== USING ARGUMENTS WITH setTimeout =================
+        function greet(name) {
+            console.log(`Hello, ${name}!`);
+        }        
+        setTimeout(greet, 1000, 'John'); // Output: "Hello, John!" after 1 second
+
+
+        //=============================== A COUNTDOWN TIMER =============================
+        
+        let countdownButton = document.getElementById('countdownButton');
+        let countdownLabel = document.getElementById('countdownLabel');
+        let stopCountdownButton = document.getElementById('stopCountdownButton');
+
+        let seconds = 10;
+        let timerX;
+
+        function countdown() {
+            countdownLabel.textContent = seconds;
+            if (seconds > 0) {
+                seconds--;
+                timerX = setTimeout(countdown, 1000);
+            } else {
+                countdownLabel.textContent = "Time's up!";
+            }
+        }
+
+        function stopCountdown() {
+            clearTimeout(timerX);
+        }
+
+
+        countdownButton.onclick = countdown;
+        stopCountdownButton.onclick = stopCountdown;
+
+        //NB: ALTERNATIVELY, We could use setInterval(updateClock, 1000).
+        // But the countdown function will not contain setTimeout(countdown, 1000);
+        // And this can be cleared using clearInterval
+
+
+
+        
+        
+
 
     </script>
 </body>
