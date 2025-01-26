@@ -11,11 +11,43 @@
     <script>
        
         // ============= E.g1: ==============
+
+        /*
         setTimeout(function(){
             console.log("Hello World!");
             console.log("Welcome Aboard");
         }, 3000);
         console.log("Welcome to programming");  // This will execute before the above
+
+        */
+
+        // ============= E.g2: ==============
+        
+        function getInternetData() {
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                resolve('Request completed successfully');
+              }, 2000);
+            });
+          }
+          
+          async function main() {
+            console.log("Welcome to test page");
+          
+            try {
+              const futureResponse = await getInternetData();
+              console.log("Future response: " + futureResponse);
+            } catch (e) {
+              console.log("Response error: " + e);
+            }
+          
+            console.log("Executed after welcome!");
+          }
+          
+          main();
+          
+
+        
     </script>
 </body>
 </html>

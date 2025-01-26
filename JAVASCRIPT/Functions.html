@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
 
         //ALSO NOTE: Arrow function, check below.
 
@@ -14,11 +14,20 @@
         // alert("You are welcome " + Name);
 
 
-        // Generic functions
+        // A. Funtion declaration
         function sayHello() {
             document.write("This is from a function! ");
         }
         sayHello();
+
+        // B. Function expression
+        const sayHello = function () {
+            document.write("This is from a function! ");
+        };
+        sayHello();
+
+        // NOTE: Function expression does not support hoisting, whereas function declaration does
+
 
 
         // Function with parameter
@@ -32,19 +41,28 @@
         }
         sayHello2("IbrahimMBS");
 
-        
+
+
+        // Function with named arguments
+        function createPerson({ firstName, lastName = "Smith", age }) {
+            document.write(`Name: ${firstName} ${lastName}, Age: ${age}`);
+        }
+        // createPerson({ firstName: "John", lastName: "Doe", age: 30 });
+        createPerson({ firstName: "John", age: 30 });
+
+
         // Function with tuple parameter. Similar to python's kwargs function. (NOTE: The ... before the parameter name)
         function myFunction(...args) {
             for (let i = 0; i < args.length; i++) {
                 console.log("Argument " + (i + 1) + ": " + args[i]);
             }
         }
-        
+
         // Call the function with named arguments
         myFunction('a', 'b', 'c', 'd'); // Passing 4 arguments
         myFunction(1, 2, 3); // Passing 3 arguments
         myFunction(); // Passing no arguments
-        
+
 
 
         // Return result in function
@@ -57,13 +75,13 @@
         var returned_answer = multiply3(3, 5);
         document.write("The returned answer = " + returned_answer)
 
-        
+
 
         //=============== Arrow function (Similar to lambda expression in python). CHECK Reference ============
         // Instead of: 
-        let hello = function(){
+        let hello = function () {
             return "Hello Ibrahim";
-        }
+        };
 
         // By arrow function, it will be (for one line of code):
         hello = () => "Hello Ibrahim";
@@ -71,7 +89,7 @@
 
         // For multiple lines of code
         hello = () => {
-            return  "Hello Ibrahim";
+            return "Hello Ibrahim";
         }
 
         hello = (x, y) => {
@@ -79,10 +97,10 @@
         }
 
     </script>
-</head>
+    </head>
 
-<body>
+    <body>
 
-</body>
+    </body>
 
 </html>

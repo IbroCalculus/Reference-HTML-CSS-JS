@@ -1,28 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JavaScript Practice</title>
-    </head>
-    <body>
 
-        <script>
-            
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice</title>
 
-        fetch("https://jsonplaceholder.typicode.com/posts", {method: "GET"})
-        .then(response => {
-            if(!response.ok) {
-                throw new Error(response.statusText);
+    <style>
+        .table-container {
+            max-height: 150px; /* Adjust based on the height of 3 rows */
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            position: sticky;
+            top: 0; /* This makes the header sticky */
+            z-index: 1; /* Ensure the header stays on top */
+        }
+
+        .error{
+            padding: 10px;
+            color: crimson;
+            border: 1px dotted crimson;
+            width: 800px;
+        }
+
+        .success{
+            padding: 10px;
+            color: limegreen;
+            border: 1px dotted limegreen;
+            width: 800px;
+            background-color: rgb(78, 73, 73);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="table-container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="error">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptas facilis quo nisi sint itaque culpa. Laborum soluta delectus hic. 
+        Voluptatem nobis minima molestias nesciunt eos iusto tempora, itaque eum voluptatum!
+    </p>
+
+    <button onclick="changeClass()">Change Class</button>
+
+
+
+    <script>
+        
+        let para1 = document.querySelector('p');
+
+        let state = 0;
+        function changeClass() {
+            if (state === 0) {
+                para1.classList.remove('error');
+                para1.classList.add('success');
+                state = 1;
+            } else {
+                para1.classList.remove('success');
+                para1.classList.add('error');
+                state = 0;
             }
-            console.log(`THE RESPONSE: ${response.status}`);
-            return response.json();
-        })
-        .then(data => { console.log(`Number of elements = ${data.length}`);})  // data.forEach(data => console.log(data.title));
-        .catch(error => console.log(`Error occured of type: ${error}`));
+
+        }
+    
+
+
+        // Data to populate the table
+        const data = [
+            { name: 'John Doe', age: 28 },
+            { name: 'Jane Smith', age: 34 },
+            { name: 'Sam Johnson', age: 45 },
+            { name: 'Chris Lee', age: 23 },
+            { name: 'Patricia Brown', age: 37 },
+            { name: 'Michael Davis', age: 41 }
+        ];
+
+        // Get the table body element
+        const tbody = document.querySelector('#data-table tbody');
+
+
+        // Loop through the data and create table rows
+        data.forEach(item => {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            const ageCell = document.createElement('td');
+
+            nameCell.textContent = item.name;
+            ageCell.textContent = item.age;
+
+            row.appendChild(nameCell);
+            row.appendChild(ageCell);
+
+            tbody.appendChild(row);
+        });
+
+
+
 
     </script>
 
-    </body>
+</body>
+
 </html>

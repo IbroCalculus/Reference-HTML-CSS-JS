@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises2</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Function that returns a promise
+        function fetchData(success) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (success) {
+                        resolve("Data fetched successfully!");
+                    } else {
+                        reject("Error: Failed to fetch data.");
+                    }
+                }, 2000); // Simulate a 2-second async operation
+            });
+        }
+
+
+
+        // Additional function that processes the data
+        function processData(data) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(`${data} Processed successfully!`);
+                }, 1000); // Simulate a 1-second async operation
+            });
+        }
+
+
+
+        // Another function that finalizes the operation
+        function finalizeData(data) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(`${data} Finalized!`);
+                }, 500); // Simulate a 0.5-second async operation
+            });
+        }
+
+
+        
+        // Using the promise with chaining
+        fetchData(true)  // Change to false to simulate an error
+            .then((data) => {
+                console.log(data);  // This runs if the promise is resolved
+                return processData(data);  // Return another promise
+            })
+            .then((processedData) => {
+                console.log(processedData);  // This runs if the previous promise is resolved
+                return finalizeData(processedData);  // Return another promise
+            })
+            .then((finalizedData) => {
+                console.log(finalizedData);  // This runs if the previous promise is resolved
+            })
+            .catch((error) => {
+                console.error(error);  // This runs if any promise is rejected
+            });
+
+    </script>
+</body>
+
+</html>

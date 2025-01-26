@@ -72,8 +72,13 @@
         
         // --- Using forEach() method
         myArray.forEach(function(item) {
-            console.log(item);
-        })        
+            console.log(item); 
+        });
+        
+        myArray.forEach(function(item, index) {
+            console.log(item + ': ' + index);
+        });
+                
 
         // --- Using for...of loop
         for (const item of myArray) {

@@ -9,91 +9,96 @@
     <!-- CHECK ALSO; Constructor function and Object Constructor -->
     <!-- CHECK ALSO: Destructuring.html -->
 
-    <script>
-
-    // Objects are variables that can contain many values
-        
-    // NB: This is the Object literal way of creating objects
-    // Object.values(person)  returns all the values of person Object
-    // Object.keys(person) - returns all the keys of person object
-
-        var human1 = {
-            name: "Ibrahim",
-            gender: "Male",
-
-            name2: "Zainab",
-            gender2: "Female",
-
-            //Ojbect inside an object
-            address: {
-                "Home_Address": "This is my home address",
-                "Office_Address": "This is my office address",
-                "Mobile_contact": 87654325645
-            },
-
-
-            laugh() {
-                document.write(`I am laughing. The name is  ${this.name} and gender is ${this.gender`);
-            },
-
-            eat: function () {
-                document.write(" I am eating ")
-            },
-
-            dance: function (x) {
-                document.write("Mr " + x + " is dancing")
-            }
-
-
-
-        };
-
-        console.log(human1.address.Home_Address);
-        console.log("You are welcome Mr " + human1.name + ", who is of gender: " + human1.gender);
-        console.log("You are welcome Miss " + human1["name2"] + ", who is of gender: " + human1["gender2"]);
-        human1.laugh();
-        document.write("<br>");
-        human1.eat();
-        document.write("<br>");
-        human1.dance("John Doe");
-        document.write("<br>");
-
-        human1.name = "Kristin";
-        document.write("<br>");
-        human1.gender = "female";
-        document.write("<br>");
-        document.write("You are welcome Miss " + human1.name + ", who is of gender: " + human1.gender + ". ");
-        document.write("<br>");
-
-        // PRINT OBJECT KEY-VALUE PAIRS
-        console.log("JSON.stringify: " + JSON.stringify(human1));
-
-        // ADD NEW PROPERTY OR MODIFY EXISTING
-        human1.surName = "Suleiman";
-        human1["surName2"] = "Second SurName";
-
-        // DELETE A PROPERTY
-        delete human1.surName;
-        delete human1["surName"];
-
-        // GET ALL VALUES IN AN OBJECT
-        console.log("ALL VALUES: " + Object.values(human1));
-
-        // GET ALL KEYS IN AN OBJECT
-        console.log("ALL KEYS: " + Object.keys(human1));
-
-        // GET NUMBER OF CHARACTERS IN A PROPERTY
-        console.log("NUMBER OF CHARS: " + human1["name2"]["length"]);
-
-        // CHECK IF HAS PROPERTY
-        console.log("HAS PROPERTY 'surName'? " + human1.hasOwnProperty("name"))
-
-
-    </script>
-
 </head>
 
 <body>
+
+    
+    <script>
+
+        // Objects are variables that can contain many values
+            
+        // NB: This is the Object literal way of creating objects
+        // Object.values(person)  returns all the values of person Object
+        // Object.keys(person) - returns all the keys of person object
+    
+            var human1 = 
+            {
+                name: "Ibrahim",
+                gender: "Male",
+    
+                name2: "Zainab",
+                gender2: "Female",
+    
+                //Ojbect inside an object
+                address: {
+                    "Home_Address": "This is my home address",
+                    "Office_Address": "This is my office address",
+                    "Mobile_contact": 87654325645
+                },
+    
+                laugh() {
+                    document.write(`I am laughing. The name is  ${this.name} and gender is ${this.gender}`);
+                },
+    
+                eat: function () {
+                    document.write(" I am eating ")
+                },
+    
+                dance: function (x) {
+                    document.write("Mr " + x + " is dancing")
+                },
+
+                getName2: function(){
+                    console.log(this.name2);
+                }
+    
+    
+    
+            };
+    
+            console.log(human1.address.Home_Address);
+            console.log("You are welcome Mr " + human1.name + ", who is of gender: " + human1.gender);
+            console.log("You are welcome Miss " + human1["name2"] + ", who is of gender: " + human1["gender2"]);
+            human1.laugh();
+            document.write("<br>");
+            human1.eat();
+            document.write("<br>");
+            human1.dance("John Doe");
+            document.write("<br>");
+    
+            human1.name = "Kristin";
+            document.write("<br>");
+            human1.gender = "female";
+            document.write("<br>");
+            document.write("You are welcome Miss " + human1.name + ", who is of gender: " + human1.gender + ". ");
+            document.write("<br>");
+    
+            // PRINT OBJECT KEY-VALUE PAIRS
+            console.log("JSON.stringify: " + JSON.stringify(human1));
+    
+            // ADD NEW PROPERTY OR MODIFY EXISTING
+            human1.surName = "Suleiman";
+            human1["surName2"] = "Second SurName";
+    
+            // DELETE A PROPERTY
+            delete human1.surName;
+            delete human1["surName"];
+    
+            // GET ALL VALUES IN AN OBJECT
+            console.log("ALL VALUES: " + Object.values(human1));
+    
+            // GET ALL KEYS IN AN OBJECT
+            console.log("ALL KEYS: " + Object.keys(human1));
+    
+            // GET NUMBER OF CHARACTERS IN A PROPERTY
+            console.log("NUMBER OF CHARS: " + human1["name2"]["length"]);
+    
+            // CHECK IF HAS PROPERTY
+            console.log("HAS PROPERTY 'surName'? " + human1.hasOwnProperty("name"))
+    
+    
+        </script>
 
 </body>
 

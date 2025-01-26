@@ -9,27 +9,42 @@
 
     <p>A sample body</p>
     
+    <h1>Hello</h1>
+    <p>Hello world!</p>
+    <p>lorem ipsum</p>
+    <p class="error">This is an error message</p>
 
     <script>
         /*
-        DOM: Is a javascript obejct that represents the the page you see in the web browser and provides
+        DOM: Is a javascript object that represents the page you see in the web browser and provides
         you with the API to interact with it.
         Web browsers constructs the DOM when it loads an HTML document, and structures all the elements
         in a tree-like representation.
         JavaScript can access the DOM to dynamically change the content, structure and style of a web page.
         */
 
-        console.log(document);
-        console.log(dir(document)); // Show all the properties inside the document
-        console.log(document.body);
-        console.log(document.head);
-        console.log(document.title);
+        console.log(`DOCUMENT: ${document}`);
+        console.dir(document); // Show all the properties inside the document
+        console.log(`BODY: ${document.body}`);
+        console.log(`HEAD: ${document.head}`);
+        console.log(`TITLE: ${document.title}`);
         document.title = "Modified DOM Reference title";
-        console.log(document.title);
-        console.log(document.body.innerHTML);
+        console.log(`TITLE MODIFIED: ${document.title}`);
+        console.log(`INNER HTML: ${document.body.innerHTML}`);
         document.body.innerHTML = "Modified DOM Reference body";
         console.log(document.body.innerHTML);
         document.body.style.backgroundColor = "hsl(250, 90%, 75%)";
+
+        
+        let para = document.querySelectorAll('p');
+        para.forEach(function(item) {
+            console.log(item);
+            item.style.color ='red';
+        });
+        console.log(para);
+
+
+        // document.getElementsByTagName('');
 
     </script>
 </body>
